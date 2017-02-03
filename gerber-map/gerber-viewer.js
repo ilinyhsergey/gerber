@@ -65,6 +65,8 @@ function boardInfoLoaded() {
 
 	L.control.layers([], layerObjects).addTo(this.map);
 
+    this.map.addLayer(L.GvNotesTools.notesLayer = new L.GvNotesTools.NotesLayer(this.map));
+
 	for(var i=0; i<info.notes.length; i++) {
 		var note = info.notes[i];
 
@@ -76,7 +78,7 @@ function boardInfoLoaded() {
 			item.innerHTML = "<b>" + note.type + " at (" + note.pos[0] + "," + note.pos[1] +"):</b><br>" + note.message;
 
 			// add a marker
-			var markerPos = L.latLng(note.pos[1], note.pos[0]); // latLng are effectively (y,x) so reverse
+			var markerPos = L.latLng(note.pos[1]*DEG_PER_MIL, note.pos[0]*DEG_PER_MIL); // latLng are effectively (y,x) so reverse
 
 			var marker;
 			switch(note.type) {
@@ -108,7 +110,8 @@ function loadViewers() {
 		// add map in preparation
 		var div   = viewer.getElementsByClassName("map")[0];
 		var notes = viewer.getElementsByClassName("notes")[0];
-		var map = L.map(div, {crs: L.CRS.SimpleScaled}).setView(L.latLng(50,50), 0);
+		var map = L.map(div, {crs: L.CRS.SimpleScaled}).setView(L.latLng(50*DEG_PER_MIL,50*DEG_PER_MIL), 0);
+        map.addControl(new L.GvNotesTools.NotesToolsControl());
 
 		request.viewer = viewer;
 		request.map    = map;

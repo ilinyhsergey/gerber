@@ -1,6 +1,7 @@
 // We expect SVGs to be in mil (svgerber seems to do this), but I prefer mm
 MM_PER_MIL = 0.0254;
-
+DEG_PER_MM = 1/111194925;// = (360 deg) / (2 * PI * Re);  // Re = 6371000000 mm - radius of Earth in mm;
+DEG_PER_MIL = MM_PER_MIL * DEG_PER_MM;
 var GerberLayer = L.Class.extend({
 	initialize: function (index, map, info, loadCallback) {
 		// create a div for the SVG; Leaflet wants this.
@@ -32,10 +33,10 @@ var GerberLayer = L.Class.extend({
 			var p = this._parent;
 
 			// pull viewBox info from the SVG, which reflect its position and size in PCB coordinates
-			var vx = svg.viewBox.baseVal.x      * MM_PER_MIL,
-			    vy = svg.viewBox.baseVal.y      * MM_PER_MIL,
-			    vw = svg.viewBox.baseVal.width  * MM_PER_MIL,
-			    vh = svg.viewBox.baseVal.height * MM_PER_MIL;
+			var vx = svg.viewBox.baseVal.x      * DEG_PER_MIL,
+			    vy = svg.viewBox.baseVal.y      * DEG_PER_MIL,
+			    vw = svg.viewBox.baseVal.width  * DEG_PER_MIL,
+			    vh = svg.viewBox.baseVal.height * DEG_PER_MIL;
 
 			// turn those into two lat/long pairs for determining the SVG's position so it aligns right
 			// remember, latitude is Y
