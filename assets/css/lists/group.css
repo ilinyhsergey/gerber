@@ -1,0 +1,127 @@
+td img {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#detailedTable_wrapper .col-sm-12 {
+	padding: 0;
+}
+
+.dataTables_info {
+	display: none;
+}
+
+td.numeric, th.numeric {
+	text-align: right;
+}
+
+td.status, th.status {
+	text-align: center;
+}
+
+table.dataTable.table-condensed .sorting:after, table.dataTable.table-condensed .sorting_asc:after, table.dataTable.table-condensed .sorting_desc:after {
+    top: 12px;
+    right: 0;
+}
+
+.col-md-3 {
+	width: 15% !important;
+}
+
+#detailedTable_filter {
+	display: none;
+}
+
+.dataTables_length {
+	display: none;
+}
+
+#detailedTable_wrapper {
+	
+}
+
+table#detailedTable td {
+	font-family: "SegOE UI";
+	font-size: 13px;
+	color: #000;
+}
+
+table#detailedTable th {
+	font-family: "Montserrat";
+	font-size: 13px;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #E5F6FB;
+}
+
+
+
+
+.jumbotron .form-group-default-select2 {
+	min-height: 56px;
+	max-height: 56px;
+	border: solid 1px #c8c8c8;
+}
+
+.jumbotron .select2-choices {
+	background-color: transparent;
+}
+
+.jumbotron  .form-group-default-select2 label.neural {
+	color: rgb(0, 76, 102); 
+}
+
+
+
+
+
+
+.form-group-default.form-group-default-select2.neural-select-minimal .select2-container .select2-choice .select2-arrow b:before { 
+    right: 0px;
+}
+
+.neural-select-minimal {
+	overflow: visible;
+}
+
+.neural-select-minimal .label {
+	font-family: "Montserrat Bold"; font-size: 11px;
+	color: #fff;
+	vertical-align: super;
+	padding: 1px 8px;
+	margin-left: 4px;
+	border-radius: 10px;
+	border: solid 1px #fff;
+	position: absolute;
+    left: 30px;
+    top: -5px;
+}
+
+
+
+#detailedTable_wrapper td, #detailedTable_wrapper th {
+	background-color: transparent;
+}
+
+
+
+
+.table-responsive::-webkit-scrollbar {
+    height: 5px;
+	width: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #666;
+}
+
+
+
+.neural-search-input-container {
+    border-bottom: solid 1px #000;
+}

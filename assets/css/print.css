@@ -1,0 +1,31 @@
+html, body {
+	overflow: visible;
+}
+
+button {
+	display: none;
+}
+
+  .header,
+  .page-sidebar,
+  .quickview-wrapper,
+  .overlay {
+    display: none;
+  }
+  .page-container {
+    padding-left: 0;
+  }
+  .page-content-wrapper .content {
+    border-top: 0;
+  }
+  .page-content-wrapper .content .panel {
+    border: none;
+  }
+  .page-content-wrapper .content .panel .panel-body {
+    padding: 0;
+  }
+  [class^='padding-'],
+  [class*='padding-'],
+  .table tbody tr td {
+    padding: 10px;
+  }

@@ -1,0 +1,696 @@
+
+.neural-search, .select2-chosen-1 {
+	color: #fff;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-content label {
+	color: #fff;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-content .select2-arrow {
+	color: #fff;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-content .form-group-default.form-group-default-select2.neural-select-minimal .select2-container .select2-choice .select2-arrow b:before {
+	color: #fff;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-search-input-container {
+	border-bottom: solid 1px #fff;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+#map, #map2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;                    
+    overflow: hidden;
+    opacity: 1;
+    transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.tray #map, .tray #map2, .mountains #map, .mountains #map2 {
+	bottom: 107px;
+}
+
+.tray #minimap, .mountains #minimap {
+	bottom: 140px;
+}
+
+.tray #controls2 {
+	bottom: 150px;
+}
+
+#map2 {
+    background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.ready #map2 {
+	visibility: visible;
+	opacity: 1;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.gmnoprint {
+    display: none;
+}
+
+#map, #map2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#map2 {
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    cursor: url("http://maps.gstatic.com/mapfiles/openhand_8_8.cur") 8 8, default;
+}
+
+.dragging #map2 {
+	transition-duration: 0;
+}
+
+#map2.zooming {
+
+}
+
+#map2.hidden2 {
+    opacity: 0;
+}
+
+.stations, .stations svg {
+    position: absolute;
+}
+
+
+.stations {
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.stations svg.paths {
+	overflow: visible;
+	position: absolute;
+	left: 0 !important;
+	top: 0 !important;
+	bottom: 0;
+	right: 0;
+	padding-right: 0;
+}
+
+#map2 .stations {
+    transform-origin: 0px 0px 0px;
+}
+
+.stations svg {
+    width: 60px;
+    height: 20px;
+    padding-right: 100px;
+    font: 10px sans-serif;
+}
+
+#map2 .stations svg {
+    
+}
+
+.stations svg.paths {
+	height: 100%;
+	width: 100%;
+}
+
+.stations circle {
+    fill: rgb(229, 48, 60);
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.stations svg.marker {
+    cursor: pointer;
+    overflow: visible;
+    opacity: 1;
+    /*transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;*/
+}
+
+.stations circle#KSUU, #minimap circle#mini-KSUU {
+    fill: #F6802C;
+}
+
+#KMER-KMOD {
+	stroke: #FEC91A;
+}
+
+#KAPC-KMER {
+	stroke: #FEC91A;
+}
+
+#KMER-KMCE {
+	stroke: #FEC91A;
+}
+
+#KMCE-KPAO {
+	stroke: #FEC91A;
+}
+
+#CASE-KSTS {
+	stroke: #45A844;
+}
+
+#CASE-MARY {
+	stroke: #45A844;
+}
+
+#TEST-JOSEPH {
+	stroke: #FEC91A;
+}
+
+.stations circle#KMOD, #minimap circle#mini-KMOD {
+    fill: #FEC91A;
+}
+
+.stations circle#KMER, #minimap circle#mini-KMER  {
+    fill: #FEC91A;
+}
+
+  .stations circle#KMER, #minimap circle#mini-KMER {
+      fill: #45A844;
+  }
+
+  .stations circle#JOSEPH, #minimap circle#mini-JOSEPH, .stations circle#google-JOSEPH, #minimap circle#google-mini-JOSEPH {
+      fill: #45A844;
+  }
+
+  .stations circle#MARY, #minimap circle#mini-MARY, .stations circle#google-MARY, #minimap circle#google-mini-MARY {
+      fill: #FEC91A;
+  }
+
+  .stations circle#KNJQ, #minimap circle#mini-KNJQ {
+      fill: #45A844;
+  }
+
+  .stations circle#KSJC, #minimap circle#mini-KJSC {
+      fill: #3D84CA;
+  }
+
+  .stations circle#KPAO, #minimap circle#mini-KPAO {
+      fill: #45A844;
+  }
+
+  .stations circle#KSFO, #minimap circle#mini-KSFO {
+      fill: #FEC91A;
+  }
+
+  .stations circle#KSNS, #minimap circle#mini-KSNS {
+      fill: #FEC91A;
+  }
+
+#map-controls {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+#map-controls button {
+    background-color: #fff;
+    color: #333;
+    border: solid 1px #333;
+    border-radius: 3px;
+}
+
+#minimap {
+	position: fixed;
+	left: 100px;
+	bottom: 30px;
+	background-color: rgba(255, 255, 255, .9);
+	border: solid 1px #ccc;
+	width: 0;
+	height: 0;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	overflow: hidden;
+	opacity: 1;					
+}
+
+.menu-pin #minimap {
+	left: 280px;
+}
+
+#minimap > div {
+	transform: scale(.16666);
+	transform-origin: 0 0;
+}
+
+#minimap svg {
+	overflow: visible;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.rtl #minimap {
+	left: auto;
+	right: 40px;
+}
+
+#minimap circle {
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+	stroke-width: 1;
+	fill: red;
+	cursor: pointer;
+}
+
+path {
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	stroke-width: 4px;
+	stroke-linejoin: round;
+	stroke: #ff0000;
+}
+
+path {
+  fill: none;
+  stroke-dasharray: 22, 8;
+  animation: flow 5s linear infinite;
+  stroke-opacity: .7
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: 300;
+  }
+}
+
+path.backdrop {
+	stroke: #fff;
+	stroke-width: 6;
+	opacity: 1;
+}
+
+path.bundled {
+	stroke: #00698C;
+}
+
+path.reversed {
+    stroke-dashoffset: 300;
+    animation: flow-reversed 5s linear infinite;
+}
+
+.noflow path, .noflow .path.reversed, path.noflow {
+    animation: none;
+    stroke-dashoffset: 0 !important;
+    stroke-dasharray: 0;
+}
+
+@keyframes flow-reversed {
+  to {
+    stroke-dashoffset: 30;
+  }
+}
+
+.stations circle.alert2 {
+	display: none;
+}
+
+image.alert2 {
+	cursor: default;
+}
+
+.stations svg.bundle-container {
+	overflow:visible;
+	padding: 0;
+}
+
+.stations circle.bundle {
+	fill: rgba(0, 128, 255, .2);
+	stroke: rgba(0, 128, 255, .2);
+	visibility: visible;
+	opacity: 1;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.stations circle.bundle-inner {
+	fill: #00698C;
+	stroke: #00698C;
+	visibility: visible;
+	opacity: 1;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.marker text {
+	font-family: "Montserrat Bold";
+	font-size: 11px;
+	color: #000;
+}
+
+.marker text.id {
+	font-family: "Segoe UI";
+}
+
+.stations svg.bundle-container text {
+	stroke: #fff;
+	fill: #fff;
+	font-family: "Montserrat";
+	font-size: 14px;
+}
+
+rect.station {
+	fill: rgb(255, 255, 255);
+    stroke: rgb(0, 0, 0);
+    stroke-width: 2;
+}
+
+svg.alert2 {
+	height:32px;
+	width: 32px;
+	overflow: visible;
+	margin: 0;
+	cursor: pointer;
+	padding-right: 0;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+svg.alert2 image {
+	opacity: 1;
+	visibility: visible;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+svg.alert2.loaded image {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.neural-alert-new {
+	background-image: url(../../img/map_pin_green_32.fw.png);
+}
+
+.neural-alert-warning {
+	background-image: url(../../img/map_pin_yellow_32.fw.png);
+}
+
+.neural-alert-error {
+	background-image: url(../../img/map_pin_red_32.fw.png);
+}
+
+.neural-alert-neural {
+	background-image: url(../../img/map_pin_blue_32.fw.png);
+}
+
+.neural-alert-loading1 {
+	background-image: url(../../img/station_status1.svg);
+}
+
+.neural-alert-loading2 {
+	background-image: url(../../img/station_status2.svg);
+}
+
+.neural-alert-loading3 {
+	background-image: url(../../img/station_status3.svg);
+}
+
+.noalerts circle.alert2 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.noalerts svg.alert2 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+body.zoomed path.go, body.zoomed text.station.go {
+    visibility: hidden;
+    opacity: 0;
+}
+
+body.zoomed path.stay2 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 26 !important;
+}
+
+body.zoomed path.stay3 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 44 !important;
+}
+
+body.zoomed path.stay4 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 62 !important;
+}
+
+body.zoomed path.stay5 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 80 !important;
+}
+
+body.zoomed path.stay6 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 106 !important;
+}
+
+body.zoomed path.stay7 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 128 !important;
+}
+
+body.zoomed path.stay8 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 150 !important;
+}
+
+body.zoomed path.stay9 {
+    visibility: visible;
+    stroke-opacity: .7
+    stroke-width: 172 !important;
+}
+
+#tray-link {
+	position: fixed;
+	bottom: 0px;
+	margin-bottom: -99px;
+	left: 70px;
+	right: 0;
+	height: 100px;
+	box-sizing: border-box;
+	background-color: rgb(255, 255, 255);
+	border-top: solid 1px transparent;
+	z-index: 101;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	overflow: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.menu-pin #tray-link {
+	left: 250px;
+}
+
+#tray-link::-webkit-scrollbar {
+    height: 5px;
+	width: 5px;
+}
+
+#tray-link::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+#tray-link::-webkit-scrollbar-track {
+    background: #666;
+}
+
+path.link {
+	stroke-width: 2px;
+	stroke: #0F0F1E;
+	stroke-dasharray: 12, 8;
+}
+
+path.link.light {
+	stroke: #ECECFB;
+}
+
+#tray-link > div {
+	display: inline-block;
+	width: 142px;
+	height: 82px;
+	margin-top: 8px;
+	border: solid 1px #ccc;
+	margin-left: 1em;
+	background-color: #f8e8e8;
+	cursor: pointer;
+	position: relative;
+	transform: scale(1);
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+#tray-link .neural-order-thumbnail {
+	transform: scale(.1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 0 0;
+	width: 1400px;
+}
+
+.neural-order-thumbnail-order {
+	float: right;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 1;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.neural-thumbnail-order-items {
+	margin-top: 40px;
+	max-height: 330px;
+	overflow: auto;
+	clear: both;
+}
+
+.neural-order-thumbnail-customer {
+    clear: both;
+    margin-left: 30px;
+    text-align: left;
+    float: left;
+}
+
+#tray-link .neural-order-thumbnail img {
+	margin-left: 50px;
+    margin-top: 20px;
+    float: left;
+}
+
+#tray-link > div:hover {
+	background-color: #fff;
+	transform: scale(1.2);
+}
+
+.neural-location #map, .neural-location #map2, .neural-location #minimap, .neural-location #tray-link {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.neural-location .neural-search-input-container {
+    border-color: #000;
+}
+
+.neural-location .neural-search, .select2-chosen-1 {
+	color: #000;
+}
+
+.neural-location .neural-content label {
+	color: #000;
+}
+
+.neural-location .neural-content .select2-arrow {
+	color: #000;
+}
+
+.neural-location .neural-content .form-group-default.form-group-default-select2.neural-select-minimal .select2-container .select2-choice .select2-arrow b:before {
+	color: #000;
+}
+
+#neural-floor-plan-container {
+	cursor: url("http://maps.gstatic.com/mapfiles/openhand_8_8.cur") 8 8, default;
+	visibility: hidden;
+	opacity: 0;
+	transition-duration: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+.dragging *, .dragging #map2, .dragging #neural-floor-plan-container {
+	cursor: url("http://maps.gstatic.com/mapfiles/closedhand_8_8.cur") 8 8, move !important;
+}
+
+.neural-location #neural-floor-plan-container {
+	visibility: visible;
+	opacity: 1;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+#neural-button-back-subway {
+	width: 300px;
+}
+
+.neural-classified-hide .classified {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#neural-menu-map-type, #neural-menu-line-type {
+	position: absolute;
+	bottom: 38px;
+    left: 90px;
+	visibility: hidden;
+	opacity: 0;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	border: solid 1px #c8c8c8;
+	background-color: #fff;
+	padding-top: 5px;
+	border-radius: 4px;
+}
+
+#neural-menu-line-type {
+	right: 8px;
+    left: auto;
+}
+
+#neural-menu-map-type.shown, #neural-menu-line-type.shown {
+	visibility: visible;
+	opacity: 1;
+}
+
+#neural-menu-map-type img, #neural-menu-line-type img {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#neural-dialog-order .modal-lg {
+	width: 1400px;
+}

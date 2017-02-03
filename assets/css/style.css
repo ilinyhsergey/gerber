@@ -1,0 +1,2192 @@
+.page-container .page-content-wrapper .content {
+	padding-bottom: 0;
+}
+
+.neural-pinbutton {
+	color: #ddd;
+	left: 10px;
+	top: 0;
+	position: absolute;
+	cursor: pointer;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-pinbutton:hover {
+	color:#fff;
+}
+
+.neural-placeholder {
+	cursor:pointer;
+	margin-right:4px;
+	height:24px;width:24px;background-color:#000;display:inline-block;vertical-align:middle;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-placeholder:hover {
+	background-color: #fff;
+}
+
+.neural-placeholder-image {
+	height:24px;width:24px;background-color:#000;display:inline-block;vertical-align:middle;margin-right:2px;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+.breadcrumb {
+	padding-bottom: 0;
+}
+
+#neural-headlines {
+	margin-bottom: 20px;
+}
+
+#neural-headlines .panel-heading {
+	padding-top:0;
+	padding-bottom:32px;
+}
+
+				.breadcrumb a {
+					font-weight: 600;
+					color: #666;
+				}
+
+				.breadcrumb a.active {
+					color: rgb(0, 76, 102);
+				}
+
+				/*table.neural td, table.neural th {
+					text-align: center;
+					padding: 5px !important;
+					color: #000 !important;
+				}
+
+				table.neural th:after {
+					opacity: 0 !important;
+				}
+
+				table.neural td p, table.neural th p {
+					padding: 0;
+					margin: 0;
+				}*/
+
+				html.fake-viewport {
+					overflow: hidden;
+					height: 100%;
+					width: 100%;
+				}
+
+				html.fake-viewport body {
+					height: 100%;
+					width: 100%;
+				}
+
+				.page-content-wrapper {
+					visibility: hidden;
+					opacity: 0;
+					transition-duration: .2s;
+				    transition-timing-function: ease-in-out;
+				}
+
+				.ready .page-content-wrapper {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				.btn {
+					font-family: "Montserrat Bold", Arial;
+					font-size: 14px;
+				}
+
+				.btn-neural {
+					background-color: rgb(0, 76, 102);
+					border-color: rgb(0, 76, 102);
+					color: #eee;
+				}
+
+				.btn-neural:hover, .btn-neural:focus, .btn-neural:hover, .btn-neural:active {
+					background-color: rgb(0, 102, 142);
+					color: #fff;
+				}
+
+				.neural-select-minimal .select2-choice {
+					background-color: transparent;
+				}
+
+				.neural-select-minimal label {
+					padding-top: 4px !important;
+				}
+
+				.form-group-default.form-group-default-select2.neural-select-minimal .select2-container .select2-choice .select2-arrow b:before {
+				    top: 0;
+					right: 30px;
+					color: #000;
+				}
+
+				.page-container {
+					height: auto;
+				}
+
+				.neural-content {
+					margin-left: 100px;
+					margin-right: 100px;
+				}
+
+				.neural-cms .neural-content {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				ul.select2-choices {
+					max-height: 88px;
+				}
+
+				#toppane {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				#toppane .panel-heading {
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 0;
+				}
+
+				.jumbotron {
+					border-bottom: solid 1px #fff;
+					margin-bottom: 0;
+					opacity: 1;
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+				}
+
+				.jumbotron .container-fluid {
+					margin-left: 0;
+				    margin-right: 0;
+				    padding-right: 0;
+				    padding-left: 0;
+				    width: 100%;
+				}
+
+				.jumbotron .inner {
+					padding-left: 100px;
+				}
+
+				.form-group.neural {
+					background-color:transparent;
+					border:none;
+					vertical-align: top;
+					display: inline-block;
+				}
+
+				.form-group.neural p, .neural-container p {
+					font-family: "Segoe UI";
+				    font-size: 12px;
+				    margin-top: 10px;
+				    line-height: 1.2;
+					margin-left: 10px;
+					margin-right: 10px;
+					color: #000;
+				}
+
+
+.neural-dialog-modeler {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 1100px;
+	box-sizing: border-box;
+	padding: 20px 30px;
+	position: absolute;
+}
+
+.neural-dialog-modeler h1.neural {
+	margin-top: 0;
+	color: #000;
+}
+
+.neural-dialog-modeler .form-group {
+	margin-top: -5px;
+	margin-left: 300px;
+	width: 220px;
+}
+
+.neural-dialog-modeler p {
+	width: 550px;
+	margin-bottom: 30px;
+}
+
+.neural-dialog-modeler label, .neural-dialog-modeler p {
+	font-family: "Segoe UI Light";
+	font-size: 16px;
+	line-height: 1;
+}
+
+.neural-dialog-modeler .noUi-target.noUi-connect {
+	width: 250px;
+}
+
+.neural-dialog-modeler label {
+	position: absolute;
+	margin-bottom: 0;
+	margin-top: 2px;
+}
+
+.neural-slider-value {
+	font-family: "Segoe UI Bold";
+	font-size: 16px;
+	width: 200px;
+	margin-left: 318px;
+	text-align: right;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.neural-dialog-sidebar {
+	position: absolute;
+	bottom: 15px;
+	top: 15px;
+	right: 15px;
+	width: 450px;
+	background-color: #f8f8f8;
+	border: solid 1px #c8c8c8;
+	padding: 10px;
+}
+
+#neural-dialog-modeler-controls {
+	margin-left: 5px;
+}
+
+.neural-dialog-sidebar .neural-slider-container {
+	background-color: #f8f8f8;
+    padding: 15px 10px 5px 20px;
+    width: 285px;
+	margin-bottom: 10px;
+}
+
+.neural-dialog-sidebar p {
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.neural-bar {
+	position: absolute;
+	width: 205px;
+	height: 0;
+	border-radius: 5px;
+	transition-duration: .8s;
+	transition-timing-function: ease-in-out;
+	font-family: "Segoe UI Light";
+	font-size: 16px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.neural-bar-savings {
+	background-color: #333;
+	color: #ccc;
+	bottom: 285px;
+    left: 15px;
+	height: 100px;
+	border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.neural-bar-costs {
+	background-color: #000;
+	color: #fff;
+	bottom: 135px;
+    left: 15px;
+	height: 150px;
+	border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.neural-bar-profit {
+	background-color: #009900;
+	color: #fff;
+	bottom: 135px;
+    right: 15px;
+	height: 300px;
+}
+
+.neural-bar-label {
+	font-family: "Segoe UI Bold";
+}
+
+.modal-body div {
+	margin-bottom: 30px;
+}
+
+				.bootstrap-tagsinput {
+					max-height: 140px;
+    				overflow: auto;
+					overflow-x: hidden;
+				}
+
+				.bootstrap-tagsinput::-webkit-scrollbar {
+				    height: 5px;
+					width: 5px;
+				}
+				
+				.bootstrap-tagsinput::-webkit-scrollbar-thumb {
+				    background: #ddd;
+				}
+				
+				.bootstrap-tagsinput::-webkit-scrollbar-track {
+				    background: #666;
+				}
+
+
+				#neural-contact-pane label {
+					color: #000;
+				}
+
+				.table thead tr th {
+					background-color: #fff;
+					color: #000;
+					border: none;
+				}
+
+				.table tbody tr td {
+					border: none;
+				}
+
+				.neural-contact-name {
+					font-family: "Montserrat";
+					font-size: 30px;
+					color: #000;
+				}
+
+				.neural-contact-role {
+					font-family: "SegOE UI Light";
+					font-size: 20px;
+					color: #000;
+				}
+
+				.neural-contact-phone {
+					font-family: "SegOE UI Light";
+					font-size: 14px;
+					color: #000;
+				}
+
+				.neural-contact-avatar {
+					height: 100px;
+					width: 100px;
+					border: solid 1px #ccc;
+					background-color: #fff;
+					border-radius: 50px;
+					display:inline-block;
+					vertical-align:middle;
+				}
+
+				h1.neural {
+					font-size: 50px;
+					font-family: "Montserrat Bold";
+					text-transform: uppercase;
+					color: rgb(0, 76, 102);
+					margin: 0;
+					margin-top: 20px;
+					line-height: 1;
+				}
+
+				h2.neural {
+					font-family: "Segoe UI Light", Arial;
+					font-size: 20px;
+					margin: 0;
+					line-height: 1;
+					margin-top: 6px;
+					margin-bottom: 0;
+					color: #5f5f5f;
+				}
+
+				h3.neural {
+					font-family: "Segoe UI Light", Arial;
+					font-size: 15px;
+					line-height: 1;
+					margin-top: 16px;
+					margin-bottom: 0;
+					color: #000;
+					width: 650px;
+				}
+
+				h4.neural {
+					font-family: Montserrat;
+					font-size: 11px;
+					margin-bottom: 0;
+					color: #000;
+					line-height: 1.5;
+    				margin-top: 0;
+				}
+
+				.neural-button-call {
+					background-color: #8c008c;
+				}
+
+				.neural-button-message {
+					background-color: #4c004c;
+				}
+
+				#neural-contact-pane {
+					position: fixed;
+				    top: 0;
+				    right: -1050px;
+				    width: 650px;
+				    z-index: 1000;
+				    border-left: solid 1px #ccc;
+				    padding-left: 20px;
+					padding-top: 20px;
+				    background-color: #eee;
+				    bottom: 0;
+				    transition-duration: .5s;
+				    transition-timing-function: ease-in-out;
+					visibility: hidden;
+					opacity: 0;
+					box-shadow: -3px 3px 3px 0 rgba(128, 128, 128, 0.36);
+				}
+
+				#neural-contact-pane.shown {
+					visibility: visible;
+					opacity: 1;
+					right: 400px;
+				}
+
+				.neural-scrollable {
+					overflow:auto;
+				}
+
+				.neural-management-badge {
+					font-family: "Montserrat";
+					font-size: 14px;
+					color: #fff;
+					position: relative;
+					height: 75px;
+					width: 400px;
+					padding-top: 5px;
+					background-color: rgb(0, 56, 72);
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+					box-sizing: border-box;
+					margin-left: 12px;
+    				margin-right: 3px;
+					cursor: pointer;
+					background-position: 4000px 8px;
+					border-bottom: solid 1px rgb(0, 76, 102);
+					opacity: 1;
+				}
+
+				#neural-management-badges, #neural-organization-people {
+					overflow-x: hidden;
+				}
+				
+				.neural-scrollable::-webkit-scrollbar, .select2-results::-webkit-scrollbar, .list-view-wrapper::-webkit-scrollbar, html::-webkit-scrollbar, .ace_scrollbar::-webkit-scrollbar, #container-wrapper::-webkit-scrollbar, .container.ui-layout-center::-webkit-scrollbar {
+				    height: 5px;
+					width: 5px;
+				}
+				
+				.neural-scrollable::-webkit-scrollbar-thumb, .select2-results::-webkit-scrollbar-thumb, .list-view-wrapper::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, .ace_scrollbar::-webkit-scrollbar-thumb, #container-wrapper::-webkit-scrollbar-thumb, .container.ui-layout-center::-webkit-scrollbar-thumb {
+				    background: #ddd;
+				}
+				
+				.neural-scrollable::-webkit-scrollbar-track, .select2-results::-webkit-scrollbar-track, .list-view-wrapper::-webkit-scrollbar-track, html::-webkit-scrollbar-track, .ace_scrollbar::-webkit-scrollbar-track, #container-wrapper::-webkit-scrollbar-track, .container.ui-layout-center::-webkit-scrollbar-track {
+				    background: #666;
+				}
+
+				#neural-organization-people .neural-management-badge {
+					background-color: rgba(0, 0, 0, .15);
+					border-bottom: solid 1px #8c008c;
+				}
+
+				#neural-organization-people .label {
+					background-color: rgb(46, 0, 58);
+					color: #fff;
+					margin-left: 10px;
+				}
+
+				.neural-management-badge:hover {
+ 					background-color: rgb(0, 46, 58);
+				}
+
+				#neural-organization-people .neural-management-badge:hover {
+ 					background-color: rgb(46, 0, 58);
+				}
+
+				.neural-management-badge.filtered {
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+					height: 0;
+					visibility: hidden;
+					opacity: 0;
+					padding: 0;
+					border-width: 0;
+				}
+
+				.neural-management-badge.selected {
+	 				background-color: rgb(0, 16, 24);
+				    background-image: url(../img/mountains.svg);
+				    background-position: -800px 8px;
+				    transition-property: background-position;
+				    transition-duration: 500s;
+				    border-bottom: solid #fff 3px;
+				    background-repeat: repeat-x;
+				    transition-timing-function: linear;
+				    background-size: 100% 100%;
+				}
+
+				#neural-organization-people .neural-management-badge.selected {
+	 				background-color: rgb(32, 0, 50);
+					background-image: none;
+					border-bottom: solid 2px #fff;
+				}
+
+				.neural-badge {
+					font-family: Titillium;
+					font-size: 11px;
+					position: absolute;
+				}
+
+				.neural-avatar {
+					height: 32px;
+					width: 32px;
+					border-radius: 16px;
+					color: #000;
+					border: solid 1px #000;
+					position: absolute;
+					bottom: 30px;
+				}
+
+				.neural-avatar-first {
+					right: 58px;
+				}
+
+				.neural-avatar-second {
+					right: 10px;
+				}
+
+				.neural-avatar-status {
+					position: absolute;
+					right: 2px;
+					height: 8px;
+					width: 8px;
+					border-radius: 4px;
+					border: solid 1px #fff;
+				}
+
+				.neural-avatar-status.neural-success {
+					background-color: #00ff00;
+				}
+
+				.neural-avatar-status.neural-failure {
+					background-color: #ff0000;
+				}
+
+				.neural-management-badge .badge-first {
+					bottom: 10px;
+					right: 67px;
+				}
+
+				.neural-management-badge .badge-second {
+					bottom: 10px;
+					right: 17px;
+				}
+
+				.neural-management-badge-status {
+					font-family: Titillium;
+					font-size: 11px;
+					position: absolute;
+					top: 7px;
+					left: 180px;
+				}
+
+				.neural-management-location {
+					margin-left: 10px;
+				}
+
+				.neural-search {
+					color:#333;
+					background-color:transparent;border:none;
+					margin-left:.5em;font-family: Titillium;font-size: 15px;
+					width: 250px;
+				}
+
+				.rtl .neural-search {
+					margin-left: 0;
+					margin-right: .5em;
+				}
+
+				.neural-helpdesk {
+					background-color: #EE7600;
+					border-color: #EE7600 !important;
+				}
+
+				.neural-helpdesk:hover, .neural-helpdesk:focus {
+					background-color: #ff0000;
+					border-color: #ff0000 !important;
+				}
+
+				.neural-helpdesk:active {
+					background-color: #ee0000 !important;
+				}
+
+				#builder.neural .tab-pane {
+					overflow: visible;
+					overflow-x: visible !important;
+				}
+
+				.builder-footer.neural {
+					border-color: #333;
+					background-color: rgb(0, 76, 102);
+					color: #fff;
+				}
+
+				.builder-footer.neural-organization {
+					border-color: #333;
+					background-color: #8c008c;
+					color: #fff;
+				}
+
+				.builder .builder-toggle, #neural-sidebar .builder-toggle {
+					position: absolute;
+  					width: 48px;
+  					height: 50px;
+  					background-color: #fff;
+					border-left: 1px solid rgba(222, 227, 231, 0.56);
+					border-bottom: 1px solid rgba(222, 227, 231, 0.56);
+					border-top: 1px solid rgba(222, 227, 231, 0.56);
+					border-bottom-left-radius: 4px;
+					border-top-left-radius: 4px;
+				    text-align: center;
+				    line-height: 50px;
+					cursor: pointer;
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+				}
+
+				.builder .builder-toggle {
+					top: 143px;
+  					left: -49px;
+				}
+
+				.builder .builder-toggle.pressed {
+  					left: -48px;
+				}
+
+				.builder-toggle.neural-organization {
+					clip: rect(0, 48px, 80px, -3px);
+					background-color: #8c008c;
+					color: #eee;
+					top: 265px;
+				}
+
+				.builder-toggle.neural:hover, .builder-toggle.neural-organization:hover {
+					color: #fff;
+				}
+
+				.builder-toggle.neural.pressed, .builder-toggle.pressed, .builder-toggle.neural-organization.pressed {					
+					box-shadow: -3px 3px 3px 0 rgba(128, 128, 128, 0.36);
+				}
+
+				.rtl .builder .builder-toggle, #neural-sidebar .builder-toggle {
+					border-bottom-right-radius: 4px;
+  					border-top-right-radius: 4px;
+					border-bottom-left-radius: 0;
+					border-top-left-radius: 0;
+				}
+
+				.rtl .builder-toggle.neural.pressed, .rtl .builder-toggle.pressed, .rtl .builder-toggle.neural-organization.pressed, #neural-sidebar .builder-toggle {					
+					box-shadow: 4px 3px 6px rgba(128, 128, 128, 0.36);
+				}
+
+				.builder-toggle.neural.pressed {
+					clip: rect(auto, 100px, 100px, -3px);
+				}
+
+				.builder:after {
+					display: none;
+				}
+
+				#builder-toggle2 {
+					background-color: rgb(0, 76, 102);
+					color: #eee;
+					position: absolute;
+				    top: 204px;
+				    text-align: center;
+				    line-height: 50px;
+					clip: rect(0, 48px, 80px, -3px);
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+					display: none;
+				}
+
+				.rtl #builder-toggle2.pressed {
+					clip: rect(0, 52px, 80px, -3px);
+				}
+
+
+				#builder-toggle3 {
+					display: none;
+				}
+
+				.neural-map #builder-toggle2 {
+					display: block;
+				}
+
+				#builder-toggle2.neural:hover {
+					color: #fff;
+				}
+
+				/*
+				#builder-toggle2.pressed, #builder-toggle1.pressed {					
+					box-shadow: -3px 3px 3px 0 rgba(128, 128, 128, 0.36);
+				}
+
+				.rtl #builder-toggle2.pressed, .rtl #builder-toggle1.pressed {					
+					box-shadow: 0 0 9px rgba(128, 128, 128, 0.36);
+				}
+
+				#builder-toggle2.pressed {
+					clip: rect(auto, 100px, 100px, -3px);
+				}*/
+
+
+				#builder {
+					transition: transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+					transition-duration: .3s;
+					transition-timing-function: ease-in-out;
+					box-shadow: -4px 0 9px rgba(128, 128, 128, 0.36);
+				}
+
+				#builder.neural {
+					color: #fff;
+					background-color: rgb(0, 76, 102);
+				}
+
+				#builder.neural-organization {
+					color: #fff;
+					background-color: #8c008c;
+				}
+
+				h5.neural, h6.neural {					
+					font-family: Titillium;
+					font-size: 20px;		
+					color: #fff;			
+				}
+
+
+				h6.neural {
+					color: #ccc;
+				}
+
+				h6.neural {
+					font-size: 15px;
+				}
+
+
+
+#mountains-container {
+	position:fixed;
+	bottom:0;left:0;right:0;
+	height:100px;
+	z-index:100;
+	margin-bottom: -100px;
+	background-color: lightblue;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	left: 70px;
+}
+
+#mountains {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-image:url(../img/mountains.svg);
+	background-position:0,0;
+	transition-duration: 240s;
+}
+
+#mountains-container button {
+	border-bottom: none;
+	background-color: lightblue;
+	top: -25px;
+    left: 80px;
+	position: absolute;
+}
+
+.mountains #mountains-container {
+	margin-bottom: 0;
+}
+
+#neural-alert-tooltip {
+	min-width: 300px;
+	background-color: #fff;
+	position: absolute;
+	border: solid 1px #c8c8c8;
+	box-shadow: #c8c8c8 3px 0px 3px;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	opacity: 1;
+	z-index: 200;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+#neural-alert-tooltip.hidden {
+	display: block !important;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#neural-alert-tooltip-title {
+	font-family: "Montserrat Bold";
+	font-size: 11px;
+}
+
+#neural-alert-tooltip-description {
+	font-family: "SegOE UI";
+	font-size: 11px;
+	margin-bottom:4px;
+}
+
+#neural-alert-tooltip-name {
+	font-family: "SegOE UI";
+	font-size: 11px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#neural-alert-tooltip-location {
+	font-family: "SegOE UI";
+	font-size: 11px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#neural-alert-tooltip img {
+	margin-right: 3px;
+}
+
+#neural-alert-tooltip .neural-arrow-down {
+	left:50%;
+}
+
+#neural-alert-tooltip .neural-arrow-up {
+	left: 18px;
+}
+
+#neural-alert-tooltip .pg-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #c8c8c8;
+}
+
+#neural-alert-tooltip .pg-close:hover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #383838;
+}
+
+#neural-alert-tooltip-top {
+	background-color: #E8EAEF;
+	padding: 5px 10px 10px 10px;
+	position: relative;
+}
+
+#creditcard {
+	font-family: "Montserrat Bold";
+	background-color: #004C66;
+	background-color: rgba(0, 76, 102, .75);
+	color: #fff;
+	padding: 0;
+	height: 225px;
+	width: 320px;
+	border-radius: 4px;
+	font-size: 20px;
+	position: fixed;
+	box-sizing: border-box;
+	padding: 20px;
+	z-index: 200;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+	opacity: 0;
+	visibility: hidden;
+	border: solid 1px #fff;
+}
+
+#creditcard .smalltext {
+	font-size: 10px;
+	color: #ccc;
+}
+
+#creditcard.shown {
+	opacity: 1;
+	visibility: visible;
+}
+
+.input-daterange {
+	width: 120px;
+	background-color: transparent;
+}
+
+.input-daterange, .form-group label, .input-group-addon {
+	color: #000;
+}
+
+.input-daterange label {
+	margin-bottom: 0;
+}
+
+.input-daterange input, .input-group-addon {
+	background-color: transparent;
+	border: none;
+}
+
+.input-group-addon {
+	padding: 0 4px;
+}
+
+.input-daterange input.form-control {
+	width: 70px;
+	font-family: "Montserrat Bold";
+	font-size: 11px;
+	padding: 0;
+}
+
+.input-daterange input.form-control.neural-date-start {
+	text-align: right;
+}
+
+th.next {
+	text-align: right;
+}
+
+th.prev {
+	text-align: left;
+}
+
+td.day, th.datepicker-switch, th.dow {
+	text-align: center !important;
+}
+
+td.active.day {
+	color: #fff !important;
+}
+
+#neural-hidden-fields {
+	opacity: 1;
+	box-sizing: border-box;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
+}
+
+#neural-hidden-fields.neural-hidden {
+	opacity: 0;
+	height: 0 !important;
+	visibility: hidden;
+	transition-timing-function: ease-in;
+}
+
+#neural-button-hidden-fields, #neural-button-hide-fields {
+	cursor: pointer;
+	background-image: url("../img/Locked_Eye.svg");
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 35px;
+	margin-bottom: 15px;
+	color: #000;
+}
+
+#neural-button-hide-fields {
+	background-image: url("../img/Locked_Eye.svg");
+}
+
+#neural-button-hidden-fields.neural-active {
+	background-image: url("../img/Unlocked_Eye.svg");
+}
+
+#neural-search-suggest {
+	position: absolute;
+	top: 3.1em;
+	opacity: 0;
+	visibility: hidden;
+	transition-duration: .3s;
+	transition-timing-function: ease-in;
+	background-color: #fff;
+	color: #000;
+	width: 315px;
+	border: solid 1px #c8c8c8;
+}
+
+#neural-search-suggest.shown {
+	opacity: 1;
+	visibility: visible;
+}
+
+.neural-search-suggest-category {
+	font-family: "Montserrat Bold";
+	padding: 2px;
+	padding-top: 4px;
+	padding-left: 4px;
+	background-color: #e8e8e8;
+}
+
+.neural-search-suggest-item {
+	font-family: "Segoe UI Light";
+	cursor: pointer;
+	padding: 2px 5px 2px 10px;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-search-suggest-item:hover {
+	background-color: rgb(0, 76, 102);
+	color: #fff;
+}
+
+.neural-curtain {
+	z-index: 100;
+	font-size: 25px;
+	visibility: visible;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, .7);
+	padding-top: 150px;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-curtain.raised {
+	visibility: hidden;
+	opacity: 0;
+	height: 0 !important;
+}
+
+.neural-dialog-content {
+	margin-bottom: 50px;
+}
+
+#quickview-footer2 .switchery-small {
+	width: 73px;
+}
+
+.neural-map .header {
+	background-color: rgba(255, 255, 255, .9);
+}
+
+.neural-map .jumbotron {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#controls button {
+	background-color: rgba(0, 76, 102, .75);
+	color: #fff;
+	padding: 5px;
+}
+
+#controls {
+	position: fixed;
+	top: 80px;
+	left: 100px;
+	z-index: 100;
+}
+
+#controls2 {
+	position: fixed;
+	bottom: 40px;
+	right: 50px;
+	z-index: 101;
+	background-color: #fff;
+	border: solid 1px #c8c8c8;
+	padding-right: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+	box-shadow: 2px 2px 2px 0 #333;
+}
+
+#controls2 > img:nth-of-type(1) {
+	border-left: solid 1px #383838;
+	padding-left: 12px;
+	margin-left: 45px;
+}
+
+#controls2 img {
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+#controls2 > img {
+    padding-top: 7px;
+    padding-bottom: 7px;
+	box-sizing: content-box;
+}
+
+.rtl #controls2 {
+	right: auto;
+	left: 50px;
+}
+
+.rtl #controls {
+	right: 100px;
+	left: auto;
+}
+
+.menu-pin #controls {
+	left: 280px;
+}
+
+.menu-pin.rtl #controls {
+	left: auto;
+	right: 280px;
+}
+
+#controls button {
+	width: 2em;
+	display: block;
+}
+
+#neural-search-container, #controls, #controls2 {
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+#neural-search-container {
+	transition-property: opacity, background-color, color;
+}
+
+.neural-map #neural-search-container {
+	position: fixed;
+	left: 160px;
+	right: 500px;
+	top: 80px;
+	z-index: 200;
+	background-color: rgba(0, 76, 102, .75);
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.neural-map .rtl #neural-search-container {
+	direction: rtl;
+	left: 500px;
+	right: 160px;
+	padding-left: 0px;
+	padding-right: 30px;
+}
+
+#neural-button-center-map {
+	margin-top: 10px
+}
+
+.neural-search-input-container {
+	width: 315px;
+	padding-bottom: 5px;
+	display: inline-block;
+}
+
+.tab-pane .neural-search-input-container {
+	border-bottom: solid 1px #333;
+	margin-top:40px;
+	width:280px;
+	padding-bottom:10px;
+	margin-bottom: 10px;
+}
+
+.tab-pane .neural-search-input-container .pg-search {
+	color: #333
+}
+
+.neural-search-input-container .neural-select-minimal {
+	margin-top: -5px;
+}
+
+.neural-arrow-down {
+	height:0;width:0;border-width: 5px;border-color: transparent;border-style: solid;border-top-color: #fff;position:absolute;
+}
+
+.neural-arrow-up {
+	height:0;width:0;border-width: 5px;border-color: transparent;border-style: solid;border-bottom-color: #fff;position:absolute;
+}
+
+#neural-alert-tooltip-bottom {
+	margin:16px 8px 8px 8px;
+}
+
+#neural-contact-info {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+#neural-contact-role, #neural-contact-phone {
+	margin-top: 5px;
+}
+
+#neural-contact-buttons {
+	margin-top: 20px;
+}
+
+#neural-contact-responsibilities {
+	width: 540px;
+	margin-top: 30px;
+	min-height: 200px;
+	border:solid 1px #ccc;
+}
+
+#neural-contact-subordinates {
+	margin-top: 30px;
+	background-color: #eee;
+	padding: 0;
+	border: none;
+}
+
+#neural-contact-subordinates .neural-scrollable {
+	height: 400px;
+	padding-right: 0;
+	box-sizing: border-box;
+	width: 540px;
+	border: solid 1px #ccc;
+}
+
+#neural-contact-subordinates table {
+ 	margin-top:0;
+}
+
+#tabThemes3 h5, #tabThemes2 h5 {
+	margin-top: 27px
+}
+
+#tabLayouts .neural-scrollable, #tabThemes .neural-scrollable {
+	position:absolute;
+	bottom: 120px;
+    left: 0;
+    top: 20px;
+}
+
+#neural-management-badges {
+	width: 420px;
+	position: absolute;
+	top: 190px;
+	bottom: 160px;
+	left: 0;
+	right: 0;
+    margin-left: -30px;
+	margin-right: -60px;
+}
+
+.tab-pane h5 {
+	font-family: Titillium;
+	font-size: 24px
+}
+
+.tab-pane p {
+	margin: 1em 0;
+	font-family: Titillium;
+	font-size: 17px;
+	color: #525260;
+}
+
+.tab-pane .neural-switch-setting {
+ 	margin-bottom: .5em;
+}
+
+.tab-pane .neural-switch-setting div {
+	font-family: Titillium;
+	font-size: 17px;
+	display: inline-block;
+	width: 11em;
+}
+
+.tab-pane .neural-search-input-container span {
+	margin-left:.5em;
+	font-family: Titillium;
+	font-size: 15px;
+}
+
+#neural-organization-people {
+	width: 420px;position:absolute;top:177px;bottom: 160px;left:0;right:0;margin-left:-30px;margin-right:-60px;
+}
+
+.neural-button-call {
+	margin-left:5px;
+}
+
+.neural-person-name {
+	margin-left:10px;
+}
+
+.neural-person-title {
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+#quickview-footer2 .pull-left {
+	margin-left:-15px;
+}
+
+#neural-switch-resolve {
+	text-align: center;
+	width: 73px;
+	margin-top: 4px;
+	font-size: 10px;
+}
+
+.neural-switch-container span {
+	margin-left:5px;
+}
+
+#builder .tab-content.m-b-30.p-l-30 {
+	overflow: visible;
+}
+
+.neural-map #neural-search-container .pg-search {
+	color: #fff;
+}
+
+.neural-map.neural-location #neural-search-container .pg-search {
+	color: #000;
+}
+
+.neural-map .menu-pin #neural-search-container {
+	left: 340px;
+	right: 320px;
+}
+
+.neural-map .neural-content {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+}
+
+.neural-map .menu-pin .neural-content {
+	left: 250px;
+}
+
+.rtl .neural-map .menu-pin .neural-content {
+	right: 240px;
+	left: auto;
+}
+
+.neural-map.neural-location .jumbotron {
+	visibility: visible;
+	opacity: 1;
+	height: 156px;
+}
+
+.neural-map.neural-location #neural-search-container, .neural-map.neural-location .neural-content {
+	position: static;
+}
+
+.neural-map.neural-location #controls {
+    top: 340px;
+    left: 170px;
+}
+
+.neural-map.neural-location #controls2 {
+    visibility: hidden;
+	opacity: 0;
+}
+
+.neural-map.neural-location #neural-search-container {
+	background-color: #fafafa;
+	color: #000;
+	position: relative;
+	top: 0;
+	padding-left: 100px;
+	left: 0;
+	z-index: 1;
+}
+
+.neural-map.neural-location h3, .neural-map.neural-location #neural-button-center-map {
+	display: none;
+}
+
+.neural-map.neural-location #neural-headlines {
+    margin-bottom: 0;
+}
+
+.neural-map.neural-location .neural-content {
+	overflow: hidden;
+}
+
+#quickview-chat {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+	visibility: hidden;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	opacity: 0;
+	right: -285px;
+}
+
+.rtl #quickview-chat {
+	left: -285px;
+	right: auto;
+}
+
+.rtl .neural-content, .rtl .jumbotron, .rtl #builder {
+	direction: rtl;
+}
+
+#quickview-chat.open {
+	visibility: visible;
+	opacity: 1;
+}
+
+#neural-select-customer {
+	margin-left: 70px;
+}
+
+.rtl #neural-select-customer {
+	margin-left: 0;
+	margin-right: 70px;
+}
+
+.rtl #builder .nav-tabs-primary {
+	margin-left: 120px;
+}
+
+#neural-status-badge {
+	position: absolute;
+    top: 5px;
+    right: 10px;
+	padding: 5px 20px;
+}
+
+#neural-location-buttons {
+	position: absolute;
+	bottom: 30px;
+	left: 850px;
+	z-index: 10;
+}
+
+.jumbotron .btn, .neural-dialog-buttons .btn, .neural-content .btn {
+	padding: 10px 30px;
+}
+
+#neural-floorplan-controls .btn {
+	padding: 10px 10px;
+	width: 180px;
+}
+
+#neural-location-buttons-secondary, #neural-floorplan-controls-secondary {
+	margin-top: 5px;
+}
+
+#neural-floor-plan {
+	width: 100%;
+	transform-origin: 50% 50%;
+	transition-duration: .1s;
+	transition-timing-function: ease-in-out;
+}
+
+#neural-floorplan-controls {
+	position: fixed;
+	bottom: 20px;
+	visibility: hidden;
+	opacity: 0;
+	right: -200px;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-location #neural-floorplan-controls {
+	right: 10px;
+	visibility: visible;
+	opacity: 1;
+}
+
+.neural-setting-header {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-family: Titillium;
+	font-size: 17px;
+}
+
+.neural-setting-header-title {
+	font-weight: bold;
+}
+
+.neural-setting-header-show {
+	color: #8f8f8f;
+	font-weight: bold;
+}
+
+#tabLayouts .switchery {
+	background-color: #008000 !important;
+    border-color: rgb(0, 128, 0) !important;
+    box-shadow: rgb(0, 128, 0) 0px 0px 0px 11px inset !important;
+}
+
+#tabLayouts .switchery.off {
+	background-color: #ff0000 !important;
+    border-color: rgb(255, 0, 0) !important;
+    box-shadow: rgb(255, 0, 0) 0px 0px 0px 11px inset !important;
+}
+
+.switchery-small:after {
+	content: 'ON';
+	margin-left: 40px;
+}
+
+.switchery-small.off:after {
+	content: 'OFF';
+}
+
+.select2-drop-active {
+	z-index: 1000;
+}
+
+#quickview-footer2 .switchery-small:after {
+	margin-left: 0;
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+.panel-body {
+	padding: 0;
+}
+
+.neural-modal-dialog .clearfix {
+	margin-bottom: 0;
+}
+
+.neural-modal-dialog div {
+	margin-bottom: 0;
+}
+
+.neural-modal-dialog .form-group {
+	margin-bottom: 20px;
+}
+
+.neural-modal-dialog h2.neural {
+	color: rgb(0, 76, 102); 
+	margin-bottom: 30px;
+}
+
+.neural-modal-dialog .neural-dialog-buttons {
+	margin-bottom: -10px;
+    padding-top: 30px;
+}
+
+.neural-admin .jumbotron .form-group-default-select2 {
+	background-color: #c8c8c8;
+}
+
+.neural-admin .select2-choices {
+	color: #000;
+}
+
+.neural-admin .jumbotron {
+	background-color: rgb(0, 76, 102);
+	color: #fff; 
+}
+
+.neural-admin .jumbotron h1.neural, .neural-admin .jumbotron h2.neural, .neural-admin .jumbotron h3.neural, .neural-admin .jumbotron h4.neural, .neural-admin .jumbotron label {
+	color: #fff;
+}
+
+.neural-admin .jumbotron .btn-neural {
+	background-color: #c8c8c8;
+	color: rgb(0, 76, 102);
+}
+
+.neural-admin .breadcrumb a.active {
+    color: #fff;
+}
+
+.neural-designer .neural-content {
+    margin: 0;
+    position: fixed;
+    top: 219px;
+    bottom: 0;
+    left: 70px;
+    right: 0;
+}
+
+#neural-attributions {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+	text-align: right;
+	z-index: 100;
+}
+
+#neural-attributions div:nth-child(odd) {
+	font-family: "Montserrat Bold";
+	font-size: 15px;
+	color: #fff;
+}
+
+#neural-attributions div:nth-child(even) {
+	font-family: "Montserrat";
+	font-size: 11px;
+	color: #ececfb;
+}
+
+#neural-palette-buttons {
+	position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#neural-palette-buttons button {
+	margin-bottom: 10px;
+	display:block;
+	width: 172px;
+}
+
+#neural-palette-buttons-dialog {
+	position: absolute;
+    bottom: 20px;
+    right: 30px;
+	z-index: 100;
+}
+
+#neural-palette-buttons-dialog button {
+	margin-left: 30px;
+	width: 122px;
+}
+
+#neural-title {
+	position: absolute;
+    top: 15px;
+    left: 30px;
+    font-family: "Montserrat Bold";
+	color: rgb(0, 76, 102);
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.neural-designer-open.neural-designer-pinned #neural-title {
+	left: 480px;
+}
+
+#neural-sidebar {
+	background-color: #e8e8e8;
+    position: absolute;
+    left: -450px;
+    top: 0;
+    bottom: 0;
+    width: 450px;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	overflow: visible;
+    box-shadow: 4px 0 9px rgba(128, 128, 128, 0.36);
+}
+
+#neural-sidebar #builder-toggle-designer {
+	right: -48px;
+    top: 80px;
+    position: absolute;
+    z-index: 100;
+	background-color: #e8e8e8;
+	border-left: none;
+}
+
+.neural-designer-open #neural-sidebar {
+	left: 0;
+}
+
+.neural-admin .jumbotron .inner {
+	padding-left: 50px;
+}
+
+#neural-tabstrip-designer {
+	margin-top: 0;
+	margin-left: 30px;
+}
+
+#neural-designer-pin1 {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	padding: 0;
+}
+
+#neural-designer-pin2 {
+	position: absolute;
+	right: 10px;
+	top: 2px;
+	padding: 0;
+	color: #3a8fc8;
+}
+
+#neural-designer-pin1 i:before, #neural-designer-pin2 i:before {
+    content: "\f10c";
+}
+
+.neural-admin .jumbotron h1.neural {
+	font-family: "Titillium Light", Arial;
+}
+
+.neural-admin .jumbotron h2.neural {
+	font-family: "Segoe UI";
+	color: #EBEBFA;
+}
+
+.neural-designer #svg-container {
+	height: 100%;
+	width: 100%;
+	transform-origin: 50% 50%;
+	overflow: hidden;
+	cursor: move;
+}
+
+.neural-designer svg {
+	transform-origin: 50% 50%;
+}
+
+#neural-sidebar label {
+	color: rgb(0, 76, 102);
+}
+
+
+		.neural-cms .neural-content h2 {
+			margin-bottom: 12px;
+    		font-size: 30px;
+		}
+
+		.neural-cms .neural-content p {
+			font-family: "SegOE UI Light";
+			max-width: 700px;
+		}
+
+		.neural-cms .neural-content p.neural-last {
+			margin-bottom: 80px
+		}
+
+		.neural-cms .label-success {
+		    background-color: #00aa00;
+		    padding: 0 10px;
+		}
+
+		.neural-cms .neural-cms-section {
+			margin-left: 100px;
+			margin-top: 100px;
+		}
+
+		.neural-cms .neural-menu-horizontal .btn {
+			font-size: 11px;
+    		color: #000;
+			border-top: solid 1px #fff;
+			border-bottom: solid 1px #fff;
+			border-left: solid 1px #A8A8B7;
+			border-right: none;
+			padding: 10px 40px;
+			border-radius: 0;
+			width: 200px;
+    		white-space: normal;
+    		line-height: 1.2;
+    		min-height: 50px;
+		}
+
+		.neural-cms .neural-menu-horizontal .btn:last-child {
+			border-top: solid 1px #fff;
+			border-right: solid 1px #A8A8B7;
+		}
+
+		.neural-cms .neural-menu-horizontal {
+			padding-left: 120px;
+			border-top: solid 1px #A8A8B7;
+			border-bottom: solid 1px #A8A8B7;
+			background-color: #fff;
+		}
+
+		.neural-cms .jumbotron {
+			height: 280px;
+		}
+
+		.neural-cms .neural-protect {
+			color: #ff0000;
+			font-family: "Montserrat Bold";
+			font-size: 10px;
+			cursor: pointer;
+			padding-left: 28px;
+			background-image: url("../img/Locked_Lock_24x24.png");
+			background-position: left;
+			background-repeat: no-repeat;
+			line-height: 24px;
+		}
+
+		.neural-cms .neural-protect:hover {
+			background-image: url("../img/UnLocked_Lock_24x24.png");
+		}
+
+		.neural-cms .neural-protect.unlocked {
+			background-image: url("../img/UnLocked_Lock_24x24.png");
+		}
+
+		.neural-cms .neural-protect.unlocked:hover {
+			background-image: url("../img/Locked_Lock_24x24.png");
+		}	
+
+		.neural-cms .neural-placeholder {
+			background-color: #fff;
+    		margin-right: 10px;
+    		margin-bottom: 4px;
+		}
+
+		.neural-cms ol.neural {
+			font-family: "Segoe UI Light", Arial;
+			font-size: 30px;
+			list-style-type: none;
+			padding: 0;
+		}
+		
+		.neural-cms ol.neural li {
+			line-height: 50px;
+		}
+
+		.neural-cms table.neural {
+			font-family: "Montserrat Bold";
+			font-size: 11px;
+			color: #000;
+		}
+
+		.neural-cms table.neural td {
+			padding-top: 2px !important;
+			padding-bottom: 2px !important;
+			padding-right: 12px !important;
+			text-align: left;	
+		}
+
+		.neural-cms #badge-status {
+			font-family: "Montserrat Bold";
+			font-size: 10px;
+			color: #000;
+		}
+
+		.neural-cms #corner {
+			font-family: "Montserrat Bold";
+			font-size: 15px;
+			color: rgb(0, 76, 102);					
+		}
+
+		.neural-cms .btn.neural {
+			background-color: rgb(0, 76, 102);
+			border-top-color: rgb(0, 76, 102);
+			border-bottom-color: rgb(0, 76, 102);
+			color: #fff;
+		}
+
+		.neural-cms .neural-bookmark {
+		
+		}
+
+.neural-scrolled .neural-menu-horizontal {
+	position: fixed;
+    right: 80px;
+    top: 100px;
+    padding-left: 0;
+	z-index: 100;
+}
+
+.neural-scrolled .neural-menu-horizontal .btn {
+    display: block;
+    border-right: solid 1px #A8ABB7;
+}
+
+
+
+
+
+  .neural-compact .page-container {
+    padding-left: 0;
+	height: 100%;
+  }
+  .neural-compact body.sidebar-open .page-container {
+    -webkit-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
+    -ms-transform: translate(250px, 0);
+    overflow: hidden;
+    position: fixed;
+  }
+  .neural-compact body.sidebar-open .push-on-sidebar-open {
+    -webkit-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
+    -ms-transform: translate(250px, 0);
+    overflow: hidden;
+  }
+  .neural-compact body.box-layout > .container {
+    padding: 0;
+    height: 100%;
+  }
+  .neural-compact body.box-layout .header > .container {
+    padding: 0;
+  }
+  .neural-compact body.box-layout .header > .container .pull-right .sm-action-bar {
+    right: 0;
+  }
+  .neural-compact body.menu-opened.horizontal-menu {
+    overflow-y: hidden;
+  }
+  .neural-compact body.menu-opened.horizontal-menu .bar {
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+    -ms-transform: translate(0%, 0);
+  }
+  .neural-compact .header {
+    padding: 0 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    background: #fff !important;
+  }
+
+  .neural-map.neural-compact .header {
+	background-color: rgba(255, 255, 255, .1) !important;
+  }
+
+  .neural-compact .header .header-inner {
+    text-align: center;
+  }
+  .neural-compact .header .header-inner .mark-email {
+    left: 45px;
+    position: absolute;
+    top: 23px;
+  }
+
+/*.neural-compact #neural-sidebar {
+	left: -520px;
+}
+
+.neural-compact .neural-designer-open #neural-sidebar {
+	left: -70px;
+}*/
+
+  .neural-compact .header .header-inner .quickview-link {
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+  .neural-compact .header .brand {
+    width: auto;
+  }
+  .neural-compact .header .notification-list,
+  .neural-compact .header .search-link {
+    display: none;
+  }
+  .neural-compact .header > .pull-left,
+  .neural-compact .header > .pull-right {
+    position: relative;
+  }
+  .neural-compact .header > .pull-right .sm-action-bar {
+    right: 0;
+  }
+  .neural-compact .sm-action-bar {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .neural-compact .sm-action-bar > a {
+    padding: 10px;
+    display: inline-block;
+  }
+  .neural-compact .pace .pace-activity {
+    top: 60px;
+  }
+  .neural-compact .page-sidebar {
+    width: 250px;
+    z-index: auto;
+    left: 0 !important;
+    right: auto;
+    -webkit-transform: translate3d(0, 0px, 0px) !important;
+    transform: translate3d(0, 0px, 0px) !important;
+  }
+
+  .neural-compact .page-sidebar .sidebar-menu .menu-items > li ul.sub-menu > li {
+    padding: 0px 30px 0 36px;
+  }
+    
+  .neural-compact .page-container {
+    padding-left: 0;
+    position: relative;
+    transition: transform .25s ease;
+    -webkit-transition: -webkit-transform 0.25s ease;
+  }
+  .neural-compact .page-container .page-content-wrapper .content {
+    overflow-x: hidden;
+    height: auto;
+  }
+  .neural-compact .icon-thumbnail {
+    margin-right: 24px;
+  }
+  .neural-compact .page-sidebar {
+    display: none;
+    z-index: auto;
+  }
+  .neural-compact .page-sidebar.visible {
+    display: block;
+  }
+  .neural-compact .page-sidebar .page-sidebar-inner {
+    z-index: 1;
+    left: 0 !important;
+    width: 260px;
+  }
+  .neural-compact .page-sidebar .page-sidebar-inner .sidebar-slide .sidebar-menu {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    top: 40px;
+    bottom: 0;
+  }
+  .neural-compact .page-sidebar .page-sidebar-inner .sidebar-slide .sidebar-menu ul > li > a > .badge {
+    display: inline-block;
+  }
+  .neural-compact .secondary-sidebar {
+    float: none;
+    height: auto;
+    left: 50%;
+    margin-left: -125px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: 9999;
+    display: none;
+    border-radius: 10px;
+  }
+  .neural-compact .secondary-sidebar .btn-compose {
+    display: none;
+  }
+  .neural-compact .inner-content {
+    margin: 0;
+  }
+  .neural-compact .breadcrumb {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .neural-compact .copyright {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .neural-compact body > .pgn-wrapper[data-position="top"] {
+    top: 48px;
+    left: 0;
+  }
+  .neural-compact body > .pgn-wrapper[data-position="bottom"] {
+    left: 0;
+  }
+  .neural-compact body > .pgn-wrapper[data-position$='-left'] {
+    left: 20px;
+    right: auto;
+  }
+  .neural-compact .sm-table {
+    display: table;
+    width: 100%;
+  }
+  .neural-compact .user-profile-wrapper {
+    position: absolute;
+    right: 50px;
+    top: -9px;
+  }
+  /*** Horizontal Menu **/
+  .neural-compact .horizontal-menu .bar {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    z-index: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 0 9px rgba(191, 191, 191, 0.36);
+    border-left: 1px solid rgba(222, 227, 231, 0.56);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -ms-transform: translate(100%, 0);
+    -webkit-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li {
+    display: block;
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li > a .arrow {
+    float: right;
+    padding-right: 25px;
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li .classic {
+    position: relative;
+    background-color: transparent;
+    top: 0;
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li .mega,
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li.horizontal {
+    position: relative;
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li > .horizontal {
+    position: relative;
+    top: 0;
+    border-bottom: 0;
+  }
+  .neural-compact .horizontal-menu .bar .bar-inner > ul > li > .horizontal li {
+    display: block;
+  }
+
+  .neural-compact .visible-sm {
+    display: block !important;
+  }
+
+  .neural-compact .hidden-sm {
+    display: none!important;
+  }	
+
+	.neural-compact .visible-lg, .neural-compact .visible-md {
+	    display: none!important;
+	}
+
+	.neural-compact .visible-sm-inline-block {
+	    display: inline-block!important;
+	}
+
+.neural-compact .hidden-lg {
+    display: table !important;
+}
+
+.neural-compact button[data-toggle-pin=sidebar] {
+	display: none !important;
+}
+
+.neural-compact-minimal #neural-search-container {
+	display: none;
+}
+
+.neural-map .neural-content {
+	left: 70px;
+}
+
+#neural-toggle-perspective {
+	position: absolute;
+	left: 6px;
+	top: 0;
+}
+
+.neural-compact .neural-content {
+	left: 0;
+	right: 0;
+}

@@ -1,0 +1,477 @@
+	.neural-group-total {
+		visibility: hidden;
+	}
+
+	.neural-collapsed .neural-group-total {
+		visibility: visible !important;
+	}
+
+	#neural-timeline tfoot td {
+		border-top: solid 2px #000;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	#neural-timeline-year {
+		font-family: 'Open Sans';
+		font-size: 15px;
+		color: #000;
+		padding-left: 5px;
+		position: absolute;
+		margin-left: -320px;
+		width: 100px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	#neural-timeline-minimap {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		border: solid 1px #c8c8c8;
+		background-color: rgba(255, 255, 255, .9);
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+		box-sizing: content-box;
+	}
+
+	#neural-timeline-minimap-viewport {
+		position: absolute;
+		left: 0;
+		top: 0;
+		outline: dashed 1px rgba(0, 0, 0, .9);
+		transition-duration: inherit;
+		transition-timing-function: inherit;
+	}
+
+	#neural-timeline-minimap table {
+		transform: scale(.05);
+		transform-origin: 0 0;
+	}
+
+	#neural-timeline-minimap-button-close {
+		font-size: 10px;
+		color: #383838;
+		position: absolute;
+		right: 2px;
+		top: 2px;
+		transition-duration: inherit;
+		transition-timing-function: inherit;
+		visibility: hidden;
+		opacity: 0;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	#neural-timeline-minimap-button-close:hover {
+		color: #000;
+	}
+
+	#neural-timeline-minimap:hover {
+		background-color: #fff;
+	}
+
+	#neural-timeline-minimap:hover #neural-timeline-minimap-button-close {
+		opacity: 1;
+		visibility: visible;
+	} 
+
+	#neural-timeline td {
+		white-space: nowrap;
+	}
+
+	.neural-timeline-order {
+		cursor: pointer;
+		text-transform: uppercase;
+		position: relative;
+		font-family: "Open Sans Light";
+		font-size: 12px;
+		color: #31313f;
+	}
+
+	.neural-timeline-order span {
+		width: 130px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.neural-timeline-order span:before {
+		content: "\f054";
+    	display: inline-block;
+    	margin-right: 8px;
+    	font-family: 'FontAwesome';
+    	transition: all 0.12s linear;
+
+    	transform: rotate(90deg);
+	}
+
+	.neural-collapsed .neural-timeline-order span:before {
+		transform: rotate(0deg);
+	}
+
+	.neural-timeline-order {
+		border-top: solid 1px transparent;
+		border-bottom: solid 1px transparent;
+	}
+
+	.neural-timeline-group-caption {
+		left: -130px;
+		top: 9px;
+    	position: absolute;
+    	cursor: pointer;
+	}
+
+	#neural-timeline-tabs {
+		position: absolute;
+    	right: 260px;
+    	top: -30px;
+	}
+
+	.neural-timeline-tabs-label {
+		font-family: "Montserrat Bold";
+    	font-size: 11px;
+    	margin-right: 5px;
+    	vertical-align: middle;
+	}
+
+	.neural-timeline-tab {
+	    border-radius: 8px;
+	    margin-left: 5px;
+	    padding: 0 5px;
+	    vertical-align: middle;
+		background-color: rgb(0, 106, 192);
+	    color: #fff;
+		cursor: pointer;
+		font-family: Montserrat;
+		font-size: 11px;
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.neural-timeline-tab:hover {
+		background-color: rgb(0, 156, 242);
+	}
+
+	.neural-timeline-tab.neural-active {
+		color: rgb(0, 106, 192);
+	    background-color: #fff;
+		cursor: default;
+	}
+	
+	.neural-timeline {
+		border-bottom: solid 4px rgb(0, 76, 102);
+		cursor: move;
+		table-layout: fixed;
+	}
+
+	.neural-timeline-container-outer {
+		position: relative;
+		padding-left: 320px;
+		box-sizing: border-box;
+	}
+
+	#neural-timeline-captions-container {
+		position: absolute;
+		top: -5px;
+		left: 30px;
+	}
+	
+	.neural-stages #neural-timeline-captions-container, .neural-stages #neural-timeline-totals-container {
+		top: 0;
+	}
+
+	#neural-timeline-totals-container {
+		position: absolute;
+		top: -4px;
+		left: 225px;
+	}
+
+	#neural-timeline-totals-container td.day-header, #neural-timeline-captions-container td.day-header {
+		text-align: center;
+	    vertical-align: bottom;
+	    font-size: 15px;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	#neural-timeline-totals-container td.day-header.stage {
+		transform: rotate(0) translate(0, 0);
+	}
+
+	.neural-timeline-captions {
+		text-align: right;
+		font-size: 15px;
+		font-family: "Montserrat Bold";
+		width: 180px;
+		table-layout: fixed;
+	}
+
+	.neural-timeline-totals {
+		text-align: center;
+		width: 85px;
+		table-layout: fixed;
+	}
+
+	.neural-timeline-captions td, .neural-timeline-totals td {
+		padding-top: 9px;
+		padding-bottom: 7px;
+	}
+
+	.neural-timeline-totals td {
+		padding-top: 8px;
+		padding-bottom: 0px;
+		font-size: 15px;
+		cursor: pointer;
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+
+	.neural-timeline-captions td div, .neural-timeline-totals td span {
+		width: 180px;
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+	
+	.neural-timeline-totals td span {
+		width: 85px;
+		display: inline-block;
+	}
+
+	.neural-timeline caption {
+		font-size: 20px;
+		font-family: "Montserrat Bold";
+		color: #000;
+		padding: 0;
+		margin-left: 5px;
+	}
+	.neural-timeline td.day, .neural-timeline td.hour, .neural-timeline td.month, .neural-timeline td.quarter {
+		height: 34px;
+		width: 102px;
+		padding: 0;
+		font-size: 1px;
+		box-sizing: border-box;
+		border: solid 1px #ccc;
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.neural-timeline td.day span, .neural-timeline td.hour span, .neural-timeline td.month span, .neural-timeline td.quarter span {
+		width: 104px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: center;
+		font-size: 15px;
+		font-family: "Open Sans";
+		display: inline-block;
+	}
+
+	td {
+		opacity: 1;
+	}
+
+	.neural-collapsed tr {
+		display: none;
+	}
+
+	.neural-timeline-captions .neural-collapsed {
+		height: 34px;
+    	display: block;
+	}
+
+	.neural-timeline-captions .neural-collapsed tr {
+		display: none;
+	}
+
+	.neural-timeline-captions .neural-collapsed tr:first-of-type, .neural-timeline-totals .neural-collapsed tr:first-of-type {
+		display: table-row;
+	}
+
+	.neural-timeline .neural-collapsed tr:first-of-type {
+		display: table-row;
+	}
+
+	table.neural.loading td.day, table.neural.loading td.hour, table.neural.loading td.month, table.neural.loading td.quarter {
+		background-color: #aaeaff;
+		transition-duration: .3s;
+		transition-timing-function: ease-in;
+	}
+
+	.neural-timeline td.day.loading1, .neural-timeline td.hour.loading1, .neural-timeline td.month.loading1, .neural-timeline td.quarter.loading1 {
+		background-color: #003fff !important;
+		transition-duration: .3s;
+		transition-timing-function: ease-in;
+	}
+
+	.neural-timeline td.day.loading2, .neural-timeline td.hour.loading2, .neural-timeline td.month.loading2, .neural-timeline td.quarter.loading2 {
+		background-color: #006fff !important;
+		transition-duration: .3s;
+		transition-timing-function: ease-in;
+	}
+
+	.neural-timeline td.day.loading3, .neural-timeline td.hour.loading3, .neural-timeline td.month.loading3, .neural-timeline td.quarter.loading3 {
+		background-color: #009fff !important;
+		transition-duration: .3s;
+		transition-timing-function: ease-in;
+	}
+
+.blink {
+  animation: blink-animation .2s steps(5, start) infinite;
+}
+
+.blink2 {
+  animation: blink-animation .3s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+					.neural-timeline td.day.finding {
+						background-color: #dddd66 !important;
+						transition-duration: .5s;
+						transition-timing-function: ease-in;
+					}
+
+					.neural-timeline td.day.found {
+						background-color: #66dd66 !important;
+						transition-duration: .5s;
+						transition-timing-function: ease-out;
+
+					}
+
+					.neural-timeline td.day.errored {
+						background-color: #ff6666 !important;
+						cursor: pointer;
+						transition-duration: .5s;
+						transition-timing-function: ease-in-out;
+					}
+
+					.neural-collapsed td div {
+						visibility: hidden;
+					}
+
+					.neural-timeline-totals .neural-collapsed td div {
+						
+					}
+				
+					#neural-timeline .neural-collapsed td, #neural-timeline-minimap .neural-collapsed td {
+						background-color: transparent !important;
+					}
+				
+					#neural-timeline .neural-collapsed td span:first-of-type, .neural-timeline-totals .neural-collapsed td span:first-of-type {
+						display: none;
+					}
+
+					#neural-timeline .neural-collapsed td span.neural-group-total:first-of-type, .neural-timeline-totals .neural-collapsed td span.neural-group-total:first-of-type {
+						display: inline-block;
+					}
+
+					.neural-timeline td.day.indeterminate {
+						background-color: #ddd;
+					}
+
+					.neural-timeline td.day-header.monday, .neural-timeline td.hour-header.midnight, .neural-timeline td.month-header.january, .neural-timeline td.quarter-header.quarter-first {
+						border-left: solid 1px rgb(0, 76, 102);
+					}
+
+					.neural-timeline td.day-header.monday.first, .neural-timeline td.hour-header.midnight.first, .neural-timeline td.month-header.january.first, .neural-timeline td.quarter-header.quarter-first.first {
+						border-left: none;
+					}
+
+					.neural-timeline td.day-header, .neural-timeline td.hour-header, .neural-timeline td.month-header, .neural-timeline td.quarter-header {
+						width: 102px;
+						padding: 0;
+    					font-size: 12px;
+						border-bottom: solid 3px rgb(0, 76, 102);
+						text-align: center;
+						font-family: "Open Sans";
+						box-sizing: border-box;
+						color: #31313f;
+					}
+
+					td.day-header.stage {
+						white-space: nowrap;
+						transform: rotate(315deg) translateY(5px) translateX(10px);
+    					height: 90px;
+    					transform-origin: 50% 50%;
+						text-align: left;
+					}
+
+					td.day-header.stage:hover {
+    					
+					}
+
+					td.day-header.stage:hover span {
+
+					}
+
+					td.day-header.stage span {
+					    display: block;
+					}
+
+					.neural-timeline td.week {
+						font-size: 15px;
+						font-family: "Open Sans";
+						color: #000;
+						padding-left: 5px;
+						border-left: solid 1px rgb(0, 76, 102);
+					}
+
+					.neural-timeline td.week.first {
+						border-left: none;
+					}
+
+					.form-group.neural {
+						border: solid 1px #c8c8c8;
+					}
+
+					.form-group label.neural {
+						color: rgb(0, 76, 102);
+					}
+					
+					.form-group.neural .select2-container-multi .select2-choices {
+						background-color: transparent;
+					} 
+					
+					.form-group.neural {
+						min-height: 58px;
+					}
+					
+					#neural-timeline-empty-caption {
+						position: absolute;
+						visibility: hidden;
+						opacity: 0;
+						background-color: rgba(255, 255, 255, 0);
+						width: 100%;
+					    height: 100%;
+					    text-align: center;
+					    left: 0;
+					    top: 0;
+					    font-size: 20px;
+					    font-weight: bold;
+					    text-align: center;
+					    padding-top: 20px;
+					    margin-top: -45px;
+					    background-color: rgba(255, 255, 255, .8);
+					    transition-duration: .5s;
+					    transition-timing-function: inherit;
+					}
+					
+					.neural-timeline-container-outer.empty #neural-timeline-empty-caption {
+					    visibility: visible;
+					    opacity: 1;
+					}
+					
+					.select2-container-multi .select2-choices .select2-search-choice {
+						background-color: #fff;
+					}
