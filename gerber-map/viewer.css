@@ -40,3 +40,19 @@
 svg {
 	transform-origin: 0 0 0;
 }
+
+.map-tool {
+	background-color: #888888;
+}
+.map-tool.comment {
+	/*background-image: url(images/c_36x36.png);*/
+	background-image: url(images/comment.png);
+	width: 55px;
+	height: 57px;
+}
+.map-tool.measure {
+	/*background-image: url(images/r_36x36.png);*/
+	background-image: url(images/measure.png);
+	width: 55px;
+	height: 57px;
+}

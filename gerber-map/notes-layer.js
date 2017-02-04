@@ -12,22 +12,20 @@
 
     L.GvNotesTools.NotesToolsControl = L.Control.extend({
         options: {
-            position: 'topright'
+            position: 'bottomleft'
         },
         onAdd: function (map) {
             _map = map;
 
             var control = L.DomUtil.create('div', 'leaflet-control-layers leaflet-control');
 
-            var circleControl = L.DomUtil.create('div', '', control);
-            circleControl.innerHTML = 'Circle';
+            var circleControl = L.DomUtil.create('div', 'map-tool comment', control);
             L.DomEvent.addListener(circleControl, 'click', function (e) {
                 usedToolType = 'circle';
                 onClickControl(e);
             });
 
-            var rulerControl = L.DomUtil.create('div', '', control);
-            rulerControl.innerHTML = 'Ruler';
+            var rulerControl = L.DomUtil.create('div', 'map-tool measure', control);
             L.DomEvent.addListener(rulerControl, 'click', function (e) {
                 usedToolType = 'ruler';
                 onClickControl(e);
@@ -100,8 +98,14 @@
     }
 
     function onMouseup(e) {
-        if (!isToolsOn)
+        if (!isToolsOn) {
             return;
+        }
+
+        if (drawableElement) {
+            _map.removeLayer(drawableElement);
+        }
+
 
         if (startLatlng) {
             var endLatlng = e.latlng;
@@ -160,8 +164,8 @@
 
     function addCommentCircle(note) {
         var circle = L.circle(note.startLatlng, note.distance / 1000, {
-            "color": "yellow",
-            "fillOpacity": 0.5
+            "color": "white",
+            "fillOpacity": 0.0
         });
         circle.addTo(_map);
         return circle;
@@ -169,7 +173,7 @@
 
     function addCommentRuler(note) {
         var line = L.polyline([note.startLatlng, note.endLatlng], {
-            "color": "yellow"
+            "color": "black"
         });
         line.addTo(_map);
         return line;
@@ -187,14 +191,14 @@
         var removeBtn = content.children[2];
 
         L.DomEvent.addListener(saveBtn, 'click', function (e) {
+            overlay.closePopup();
             note.commentBody = commentInput.value;
             saveNote(note);
-            overlay.closePopup();
         });
         L.DomEvent.addListener(removeBtn, 'click', function (e) {
+            overlay.closePopup();
             _map.removeLayer(overlay);
             removeNote(note.id);
-            overlay.closePopup();
         });
 
         var popup = L.popup()
