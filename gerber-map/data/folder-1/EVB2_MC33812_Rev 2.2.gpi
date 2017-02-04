@@ -1,0 +1,50 @@
+Photoplotter Info File: C:/Documents and Settings/R80230/My Documents/My Downloads/Eagle Cad/projects/EVB33812/EVB2_MC33812_Rev 2.2.gpi
+
+ Date              :  1/14/2009 02:21:25p
+ Plotfile          : C:/Documents and Settings/R80230/My Documents/My Downloads/Eagle Cad/projects/EVB33812/EVB2_MC33812_Rev 2.2.sts
+ Apertures         : generated: 
+ Device            : Gerber photoplotter with RS-274-X aperture generation
+
+Parameter settings:
+
+ Emulate Apertures : no
+ Emulate Thermal   : no
+ Emulate Annulus   : no
+ Tolerance Draw  + :  0.00 %
+ Tolerance Draw  - :  0.00 %
+ Tolerance Flash + :  0.00 %
+ Tolerance Flash - :  0.00 %
+ Rotate            : no
+ Mirror            : yes
+ Optimize          : yes
+ Auto fit          : yes
+ OffsetX           : 0inch
+ OffsetY           : 0inch
+
+Plotfile Info:
+
+ Coordinate Format : 2.4
+ Coordinate Units  : Inch
+ Data Mode         : Absolute
+ Zero Suppression  : None
+ End Of Block      : *
+
+Apertures used:
+
+ Code     Shape     Size                  used
+
+ D10      round     0.0740inch              25
+ D11      square    0.4680inch               1
+ D12      octagon   0.0680inch              16
+ D13      oval      0.1640inch x 0.0860inch    10
+ D14      oval      0.0680inch x 0.1280inch     5
+ D15      oval      0.1280inch x 0.0680inch    11
+ D16      square    0.0480inch              30
+ D17      oval      0.0674inch x 0.1267inch     6
+ D18      square    0.0907inch               1
+ D19      round     0.0907inch               3
+ D20      round     0.1340inch               2
+ D21      round     0.1379inch               4
+ D22      round     0.0340inch              57
+ D23      round     0.0390inch              18
+

@@ -1,0 +1,60 @@
+{
+  "name": "data",
+  "layers": [
+    {
+      "name": "folder-11",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.sol.svg",
+      "color": "#E3D7D6"
+    },
+    {
+      "name": "folder-12",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.stc.svg",
+      "color": "#999"
+    },
+    {
+      "name": "folder-13",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.sts.svg",
+      "color": "#B0B0B0"
+    },
+    {
+      "name": "folder-14",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.sl2.svg",
+      "color": "#AE2427"
+    },
+    {
+      "name": "folder-15",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.cmp.svg",
+      "color": "#7d1f1f"
+    },
+    {
+      "name": "folder-16",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.sl1.svg",
+      "color": "#852624"
+    },
+    {
+      "name": "folder-17",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.dri.svg",
+      "color": "#999"
+    },
+    {
+      "name": "folder-18",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.gpi.svg",
+      "color": "#E3D7D6"
+    },
+    {
+      "name": "folder-19",
+      "svg": "gerber-map/data/folder-1/EVB2_MC33812_Rev 2.2.plc.svg",
+      "color": "#000"
+    }
+  ],
+  "notes": [
+    {
+      "type": "warning",
+      "pos": [
+        10,
+        10
+      ],
+      "message": "what's up"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "data",
+  "layers": [
+    {
+      "name": "folder-21",
+      "svg": "gerber-map/data/folder-2/rect-tool-zero-length.svg"
+    },
+    {
+      "name": "folder-22",
+      "svg": "gerber-map/data/folder-2/rect-tool-single-segment.svg"
+    },
+    {
+      "name": "folder-23",
+      "svg": "gerber-map/data/folder-2/rect-tool-multi-segment.svg"
+    },
+    {
+      "name": "folder-24",
+      "svg": "gerber-map/data/folder-2/circle-tool-zero-length.svg"
+    },
+    {
+      "name": "folder-25",
+      "svg": "gerber-map/data/folder-2/circle-tool-single-segment.svg"
+    },
+    {
+      "name": "folder-26",
+      "svg": "gerber-map/data/folder-2/circle-tool-multi-segment.svg"
+    }
+  ],
+  "notes": [
+    {
+      "type": "warning",
+      "pos": [
+        6,
+        6
+      ],
+      "message": "what's up"
+    }
+  ]
+}
