@@ -83,7 +83,7 @@
         if (!isToolsOn) {
             _map.dragging.disable();
             isToolsOn = true;
-            setCursor('default');
+            setCursor();
             _map.once('mousedown', onMousedown);
         } else {
             _map.dragging.enable();
@@ -93,17 +93,24 @@
         }
     }
 
-    var savedCursorValue = null;
-
-    function setCursor(cursorValue) {
+    function setCursor() {
         var leafletContainer = document.getElementsByClassName('leaflet-container');
-        savedCursorValue = leafletContainer[0].style.cursor;
-        leafletContainer[0].style.cursor = cursorValue;
+        leafletContainer[0].classList.add('crosshair-cursor');
+
+        var leafletClickable = document.getElementsByClassName('leaflet-clickable');
+        for(var i = 0; i < leafletClickable.length; ++i){
+            leafletClickable[i].classList.add('crosshair-cursor');
+        }
     }
 
     function resetCursor() {
         var leafletContainer = document.getElementsByClassName('leaflet-container');
-        leafletContainer[0].style.cursor = savedCursorValue;
+        leafletContainer[0].classList.remove('crosshair-cursor');
+
+        var leafletClickable = document.getElementsByClassName('leaflet-clickable');
+        for(var i = 0; i < leafletClickable.length; ++i){
+            leafletClickable[i].classList.remove('crosshair-cursor');
+        }
     }
 
     function onMousedown(e) {

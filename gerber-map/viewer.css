@@ -56,3 +56,8 @@ svg {
 	width: 55px;
 	height: 57px;
 }
+
+.crosshair-cursor.leaflet-container,
+.crosshair-cursor.leaflet-clickable {
+	cursor: crosshair;
+}
