@@ -33,9 +33,9 @@ function boardInfoLoaded() {
 		return;
 
 	// at this point we can assume the board info was loaded.
-	console.log(info);
+	// console.log(info);
 	var info = JSON.parse(this.responseText);
-	console.log(info);
+	// console.log(info);
 	var layerObjects = {}, map = this.map;
 	var layerLoaded = function(l) {
 		// called when the layer SVG has been loaded.
@@ -53,12 +53,13 @@ function boardInfoLoaded() {
 		}
 
 		map.fitBounds(boardBounds);
-	}
+	};
 
 	// add layers
 	for(var i=0; i<info.layers.length; i++) {
 		var layer = info.layers[i];
-		var l = new GerberLayer(i, this.map, layer, layerLoaded);
+		// var l = new GerberLayer(i, this.map, layer, layerLoaded);
+		var l = new GerberLayer(0, this.map, layer, layerLoaded);// todo used zindex=0 for all svg
 		layerObjects[layer.name] = l;
 		this.map.addLayer(l);
 	}
