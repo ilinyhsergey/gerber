@@ -61,3 +61,31 @@ svg {
 .crosshair-cursor.leaflet-clickable {
 	cursor: crosshair;
 }
+
+.popup-creator .number-circle {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    border: 2px solid black;
+}
+
+.popup-creator .number-circle span {
+    text-align: center;
+    line-height: 28px;
+    display: block;
+}
+
+.popup-creator select {
+    font-size: 19px;
+    width: 100%;
+}
+
+.popup-creator textarea {
+    resize: none;
+}
+
+.popup-creator .header {
+    width: 100%;
+    height: 32px;
+}

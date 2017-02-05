@@ -9,6 +9,7 @@
     var usedToolType = null;
     var commentsStorage;
     var rulerStorage;
+    var popupCreator;
 
     // gerber viewer tools namespace
     L.GvNotesTools = {};
@@ -48,6 +49,10 @@
         onRemove: function (map) {
         },
         onAdd: function (map) {
+            this._initStorages();
+            this._initPopupCreator();
+        },
+        _initStorages: function () {
             var overlay, marker, id;
             var maxId = lastMarkerId;
 
@@ -76,6 +81,65 @@
             }
 
             lastMarkerId = maxId;
+        },
+        _initPopupCreator: function () {
+            var content = L.DomUtil.create('div', 'popup-creator');
+            content.innerHTML =
+                '<div class="number-circle"><span id="markerId">' + (lastMarkerId + 1) + '</span></div>' +
+                '<select id="commentType">' +
+                '   <option value="Problem">Problem</option>' +
+                '   <option value="Suggestion">Suggestion</option>' +
+                '</select>' +
+                '<br/>' +
+                '<textarea placeholder="Write a description" autofocus></textarea>' +
+                '<br/>' +
+                '<input type="button" value="Save">' +
+                '<input type="button" value="Cancel">'
+            ;
+
+            popupCreator = L.popup()
+                .setContent(content);
+
+            var markerId = content
+                .getElementsByClassName('number-circle')[0]
+                .getElementsByTagName('span')[0];
+            var select = content.getElementsByTagName('select')[0];
+            var textarea = content.getElementsByTagName('textarea')[0];
+            var inputs = content.getElementsByTagName('input');
+
+            L.DomEvent.addListener(inputs[0], 'click', function (e) {
+                markerId.innerHTML = ++lastMarkerId;
+                var endLatlng = popupCreator.getLatLng();
+                var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
+                var commentMarker = {
+                    _id: lastMarkerId,
+                    _centerLatlng: startLatlng,
+                    _radius: distanceMeters * 1000,
+                    title: select.value,
+                    body: textarea.value,
+                    author: 'jimb@jim.com',
+                    date: _formatDate(new Date())
+                };
+                commentsStorage.saveOne(commentMarker);
+                var overlay = addComment(commentMarker);
+                addCommentPopup(commentMarker, overlay);
+                // .openOn(_map);
+
+                popupCreator._close();
+                _clearPopupCreator();
+                startLatlng = null;
+            });
+            L.DomEvent.addListener(inputs[1], 'click', function (e) {
+                popupCreator._close();
+                _clearPopupCreator();
+                startLatlng = null;
+            });
+
+            function _clearPopupCreator() {
+                select.value = 'Problem';
+                textarea.value = '';
+            }
+
         }
     });
 
@@ -98,7 +162,7 @@
         leafletContainer[0].classList.add('crosshair-cursor');
 
         var leafletClickable = document.getElementsByClassName('leaflet-clickable');
-        for(var i = 0; i < leafletClickable.length; ++i){
+        for (var i = 0; i < leafletClickable.length; ++i) {
             leafletClickable[i].classList.add('crosshair-cursor');
         }
     }
@@ -108,7 +172,7 @@
         leafletContainer[0].classList.remove('crosshair-cursor');
 
         var leafletClickable = document.getElementsByClassName('leaflet-clickable');
-        for(var i = 0; i < leafletClickable.length; ++i){
+        for (var i = 0; i < leafletClickable.length; ++i) {
             leafletClickable[i].classList.remove('crosshair-cursor');
         }
     }
@@ -135,19 +199,9 @@
             var overlay;
 
             if (usedToolType === 'circle') {
-                var commentMarker = {
-                    _id: ++lastMarkerId,
-                    _centerLatlng: startLatlng,
-                    _radius: distanceMeters * 1000,
-                    title: 'Problem',
-                    body: 'This is a note which would be saved as a document.',
-                    author: 'jimb@jim.com',
-                    date: _formatDate(new Date())
-                };
-                overlay = addComment(commentMarker);
-                addCommentPopup(commentMarker, overlay).openOn(_map);
-                commentsStorage.saveOne(commentMarker)
-
+                popupCreator
+                    .setLatLng(endLatlng)
+                    .openOn(_map);
             } else  /*if (usedToolType === 'ruler')*/ {
                 var rulerMarker = {
                     _id: ++lastMarkerId,
@@ -156,12 +210,12 @@
                     reason: 'reason',
                     distance: distanceMeters * 1000
                 };
-                overlay = addRuler(rulerMarker);
-                addRulerPopup(rulerMarker, overlay).openOn(_map);
                 rulerStorage.saveOne(rulerMarker);
+                overlay = addRuler(rulerMarker);
+                addRulerPopup(rulerMarker, overlay)
+                    .openOn(_map);
+                startLatlng = null;
             }
-
-            startLatlng = null;
         }
 
         _map.off('mousemove', onMousemove);
@@ -218,7 +272,7 @@
     function addCommentPopup(marker, overlay/*Path class*/) {
         var content = L.DomUtil.create('div', 'editable-note');
         content.innerHTML =
-            '<h4>' + marker.title + '</h4><br/>' +
+            '<h4>' + marker.title + '</h4>' +
             '<b>' + marker.body + '</b><br/>' +
             '<span><b>Author:</b> ' + marker.author + '</span><br/>' +
             '<span><b>Date:</b> ' + marker.date + '</span>'
