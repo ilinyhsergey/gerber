@@ -66,7 +66,7 @@ svg {
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    font-size: 14px;
+    font-size: 18px;
     border: 2px solid black;
 }
 
@@ -76,9 +76,15 @@ svg {
     display: block;
 }
 
+.popup-comment h4 {
+	font-size: 20px;
+}
+
 .popup-comment select {
     font-size: 19px;
-    width: 100%;
+	position: absolute;
+	left: 62px;
+	top: 17px;
 }
 
 .popup-comment textarea {
