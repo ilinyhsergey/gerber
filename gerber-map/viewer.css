@@ -62,7 +62,7 @@ svg {
 	cursor: crosshair;
 }
 
-.popup-creator .number-circle {
+.popup-comment .number-circle {
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -70,22 +70,22 @@ svg {
     border: 2px solid black;
 }
 
-.popup-creator .number-circle span {
+.popup-comment .number-circle span {
     text-align: center;
     line-height: 28px;
     display: block;
 }
 
-.popup-creator select {
+.popup-comment select {
     font-size: 19px;
     width: 100%;
 }
 
-.popup-creator textarea {
+.popup-comment textarea {
     resize: none;
 }
 
-.popup-creator .header {
-    width: 100%;
-    height: 32px;
+.popup-comment .comment-header {
+    /*width: 100%;*/
+    /*height: 32px;*/
 }

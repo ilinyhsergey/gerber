@@ -53,7 +53,7 @@
             this._initPopupCreator();
         },
         _initStorages: function () {
-            var overlay, marker, id;
+            var overlays, marker, id;
             var maxId = lastMarkerId;
 
             commentMarkers = commentsStorage.getAll();
@@ -63,8 +63,8 @@
                         maxId = id;
                     }
                     marker = commentMarkers[id];
-                    overlay = addComment(marker);
-                    addCommentPopup(marker, overlay);
+                    overlays = addComment(marker);
+                    addCommentPopup(marker, overlays[0]);
                 }
             }
 
@@ -75,15 +75,15 @@
                         maxId = id;
                     }
                     marker = rulerMarkers[id];
-                    overlay = addRuler(marker);
-                    addRulerPopup(marker, overlay);
+                    overlays = addRuler(marker);
+                    addRulerPopup(marker, overlays[0]);
                 }
             }
 
             lastMarkerId = maxId;
         },
         _initPopupCreator: function () {
-            var content = L.DomUtil.create('div', 'popup-creator');
+            var content = L.DomUtil.create('div', 'popup-comment');
             content.innerHTML =
                 '<div class="number-circle"><span id="markerId">' + (lastMarkerId + 1) + '</span></div>' +
                 '<select id="commentType">' +
@@ -121,8 +121,8 @@
                     date: _formatDate(new Date())
                 };
                 commentsStorage.saveOne(commentMarker);
-                var overlay = addComment(commentMarker);
-                addCommentPopup(commentMarker, overlay);
+                var overlays = addComment(commentMarker);
+                addCommentPopup(commentMarker, overlays[0]);
                 // .openOn(_map);
 
                 popupCreator._close();
@@ -188,21 +188,17 @@
             return;
         }
 
-        if (drawableElement) {
-            _map.removeLayer(drawableElement);
-        }
-
+        _removeDrawableElements();
 
         if (startLatlng) {
             var endLatlng = e.latlng;
-            var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
-            var overlay;
 
             if (usedToolType === 'circle') {
                 popupCreator
                     .setLatLng(endLatlng)
                     .openOn(_map);
             } else  /*if (usedToolType === 'ruler')*/ {
+                var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
                 var rulerMarker = {
                     _id: ++lastMarkerId,
                     _startLatlng: startLatlng,
@@ -211,8 +207,8 @@
                     distance: distanceMeters * 1000
                 };
                 rulerStorage.saveOne(rulerMarker);
-                overlay = addRuler(rulerMarker);
-                addRulerPopup(rulerMarker, overlay)
+                var overlays = addRuler(rulerMarker);
+                addRulerPopup(rulerMarker, overlays[0])
                     .openOn(_map);
                 startLatlng = null;
             }
@@ -224,12 +220,18 @@
         resetCursor();
     }
 
-    var drawableElement;
+    var drawableElements = [];
+
+    function _removeDrawableElements() {
+        if (drawableElements.length > 0) {
+            drawableElements.forEach(function (drawableElement) {
+                _map.removeLayer(drawableElement);
+            });
+        }
+    }
 
     function onMousemove(e) {
-        if (drawableElement) {
-            _map.removeLayer(drawableElement);
-        }
+        _removeDrawableElements();
 
         var endLatlng = e.latlng;
         var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
@@ -240,7 +242,7 @@
                 _centerLatlng: startLatlng,
                 _radius: distanceMeters * 1000
             };
-            drawableElement = addComment(commentMarker);
+            drawableElements = addComment(commentMarker);
         } else  /*if (usedToolType === 'ruler')*/ {
             var rulerMarker = {
                 _id: ++lastMarkerId,
@@ -248,52 +250,57 @@
                 _endLatlng: endLatlng
                 // ,distance: distanceMeters * 1000
             };
-            drawableElement = addRuler(rulerMarker);
+            drawableElements = addRuler(rulerMarker);
         }
     }
 
     function addComment(marker) {
         var circle = L.circle(marker._centerLatlng, marker._radius / 1000, {
-            "color": "white",
-            "fillOpacity": 0.0
+            color: "orange",
+            fillOpacity: 0.0,
+            opacity: 1
         });
         circle.addTo(_map);
-        return circle;
+        return [circle];
     }
 
     function addRuler(marker) {
+        var tailOptions = {
+            opacity: 1,
+            color: 'black',
+            weight: 1,
+            fillColor: 'black',
+            fillOpacity: 1
+        };
+        var radius = 3;
+
+        var startTail  = L.circleMarker( marker._startLatlng, tailOptions)
+            .setRadius(radius)
+            .addTo(_map);
+
+        var endTail = L.circleMarker( marker._endLatlng, tailOptions)
+            .setRadius(radius)
+            .addTo(_map);
+
         var line = L.polyline([marker._startLatlng, marker._endLatlng], {
-            "color": "black"
+            opacity: 1,
+            color: 'black',
+            weight: 3
         });
         line.addTo(_map);
-        return line;
+        return [line, startTail, endTail];
     }
 
     function addCommentPopup(marker, overlay/*Path class*/) {
-        var content = L.DomUtil.create('div', 'editable-note');
+        var content = L.DomUtil.create('div', 'popup-comment');
         content.innerHTML =
-            '<h4>' + marker.title + '</h4>' +
+            '<div class="comment-header">' +
+            '   <div class="number-circle"><span>' + marker._id + '</span></div>' +
+            '   <h4>' + marker.title + '</h4>' +
+            '</div>' +
             '<b>' + marker.body + '</b><br/>' +
             '<span><b>Author:</b> ' + marker.author + '</span><br/>' +
-            '<span><b>Date:</b> ' + marker.date + '</span>'
-        // +'<input type="submit" value="Save">'
-        // +'<input type="button" value="Remove">'
-        ;
-
-        // var commentInput = content.children[0];
-        // var saveBtn = content.children[1];
-        // var removeBtn = content.children[2];
-        //
-        // L.DomEvent.addListener(saveBtn, 'click', function (e) {
-        //     overlay.closePopup();
-        //     note.commentBody = commentInput.value;
-        //     saveNote(note);
-        // });
-        // L.DomEvent.addListener(removeBtn, 'click', function (e) {
-        //     overlay.closePopup();
-        //     _map.removeLayer(overlay);
-        //     removeNote(note.id);
-        // });
+            '<span><b>Date:</b> ' + marker.date + '</span>';
 
         var popup = L.popup()
             .setLatLng(marker._centerLatlng)
@@ -305,7 +312,7 @@
     }
 
     function addRulerPopup(marker, overlay/*Path class*/) {
-        var content = L.DomUtil.create('div', 'editable-note');
+        var content = L.DomUtil.create('div', 'popup-comment');
         content.innerHTML = '<b>Distance:</b>' + marker.distance.toFixed(2) + ' mm';
 
         var middle = L.latLng(
