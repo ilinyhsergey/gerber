@@ -23,15 +23,19 @@
         onAdd: function (map) {
             _map = map;
 
-            var control = L.DomUtil.create('div', 'leaflet-control-layers leaflet-control');
+            var control = L.DomUtil.create('div', 'leaflet-control');
 
             var circleControl = L.DomUtil.create('div', 'map-tool comment', control);
+            circleControl.innerHTML = '<div>Comment</div>';
+
             L.DomEvent.addListener(circleControl, 'click', function (e) {
                 usedToolType = 'circle';
                 onClickControl(e);
             });
 
             var rulerControl = L.DomUtil.create('div', 'map-tool measure', control);
+            rulerControl.innerHTML = '<div>Measure</div>';
+
             L.DomEvent.addListener(rulerControl, 'click', function (e) {
                 usedToolType = 'ruler';
                 onClickControl(e);
