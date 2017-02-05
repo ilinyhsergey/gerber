@@ -2,7 +2,8 @@
 
     var commentMarkers = {};
     var rulerMarkers = {};
-    var lastMarkerId = 0;
+    var lastRulerId = 0;
+    var lastCommentId = 0;
     var isToolsOn = false;
     var startLatlng = null;
     var _map = null;
@@ -10,6 +11,7 @@
     var commentsStorage;
     var rulerStorage;
     var popupCreator;
+    var setPopupCreatorCommentId;
 
     // gerber viewer tools namespace
     L.GvNotesTools = {};
@@ -53,39 +55,34 @@
             this._initPopupCreator();
         },
         _initStorages: function () {
-            var overlays, marker, id;
-            var maxId = lastMarkerId;
+            var overlays;
 
+            var maxCommentId = lastCommentId;
             commentMarkers = commentsStorage.getAll();
-            for (id in commentMarkers) {
-                if (commentMarkers.hasOwnProperty(id)) {
-                    if (id > maxId) {
-                        maxId = id;
-                    }
-                    marker = commentMarkers[id];
-                    overlays = addComment(marker);
-                    addCommentPopup(marker, overlays[0]);
+            commentMarkers.forEach(function (marker) {
+                if (marker._id > maxCommentId) {
+                    maxCommentId = marker._id;
                 }
-            }
+                overlays = addComment(marker);
+                addCommentPopup(marker, overlays[0]);
+            });
+            lastCommentId = maxCommentId;
 
+            var maxRulerId = lastRulerId;
             rulerMarkers = rulerStorage.getAll();
-            for (id in rulerMarkers) {
-                if (rulerMarkers.hasOwnProperty(id)) {
-                    if (id > maxId) {
-                        maxId = id;
-                    }
-                    marker = rulerMarkers[id];
-                    overlays = addRuler(marker);
-                    addRulerPopup(marker, overlays[0]);
+            rulerMarkers.forEach(function (marker) {
+                if (marker._id > maxRulerId) {
+                    maxRulerId = marker._id;
                 }
-            }
-
-            lastMarkerId = maxId;
+                overlays = addRuler(marker);
+                addRulerPopup(marker, overlays[0]);
+            });
+            lastRulerId = maxRulerId;
         },
         _initPopupCreator: function () {
             var content = L.DomUtil.create('div', 'popup-comment');
             content.innerHTML =
-                '<div class="number-circle"><span id="markerId">' + (lastMarkerId + 1) + '</span></div>' +
+                '<div class="number-circle"><span id="markerId"></span></div>' +
                 '<select id="commentType">' +
                 '   <option value="Problem">Problem</option>' +
                 '   <option value="Suggestion">Suggestion</option>' +
@@ -100,6 +97,10 @@
             popupCreator = L.popup()
                 .setContent(content);
 
+            setPopupCreatorCommentId = function (markerIdContent) {
+                markerId.innerHTML = markerIdContent;
+            };
+
             var markerId = content
                 .getElementsByClassName('number-circle')[0]
                 .getElementsByTagName('span')[0];
@@ -108,11 +109,11 @@
             var inputs = content.getElementsByTagName('input');
 
             L.DomEvent.addListener(inputs[0], 'click', function (e) {
-                markerId.innerHTML = ++lastMarkerId;
+                markerId.innerHTML = (++lastCommentId);
                 var endLatlng = popupCreator.getLatLng();
                 var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
                 var commentMarker = {
-                    _id: lastMarkerId,
+                    _id: lastCommentId,
                     _centerLatlng: startLatlng,
                     _radius: distanceMeters * 1000,
                     title: select.value,
@@ -138,6 +139,7 @@
             function _clearPopupCreator() {
                 select.value = 'Problem';
                 textarea.value = '';
+                markerId.innerHTML = '';
             }
 
         }
@@ -194,13 +196,14 @@
             var endLatlng = e.latlng;
 
             if (usedToolType === 'circle') {
+                setPopupCreatorCommentId(lastCommentId + 1);
                 popupCreator
                     .setLatLng(endLatlng)
                     .openOn(_map);
             } else  /*if (usedToolType === 'ruler')*/ {
                 var distanceMeters = endLatlng.distanceTo(startLatlng);// in meters
                 var rulerMarker = {
-                    _id: ++lastMarkerId,
+                    _id: ++lastRulerId,
                     _startLatlng: startLatlng,
                     _endLatlng: endLatlng,
                     reason: 'reason',
@@ -245,7 +248,7 @@
             drawableElements = addComment(commentMarker);
         } else  /*if (usedToolType === 'ruler')*/ {
             var rulerMarker = {
-                _id: ++lastMarkerId,
+                _id: null,
                 _startLatlng: startLatlng,
                 _endLatlng: endLatlng
                 // ,distance: distanceMeters * 1000
@@ -274,11 +277,11 @@
         };
         var radius = 3;
 
-        var startTail  = L.circleMarker( marker._startLatlng, tailOptions)
+        var startTail = L.circleMarker(marker._startLatlng, tailOptions)
             .setRadius(radius)
             .addTo(_map);
 
-        var endTail = L.circleMarker( marker._endLatlng, tailOptions)
+        var endTail = L.circleMarker(marker._endLatlng, tailOptions)
             .setRadius(radius)
             .addTo(_map);
 
@@ -340,20 +343,39 @@
         this.removeOne = _removeMarker;
 
         function _getMarkers() {
-            return JSON.parse(localStorage.getItem(_this._storageName)) || {};
+            return JSON.parse(localStorage.getItem(_this._storageName)) || [];
         }
 
         function _saveMarker(marker) {
             _this._markers = _getMarkers();
-            _this._markers[marker._id] = marker;
+            var foundPos = _findPosition(marker._id);
+            if (foundPos === null) {
+                _this._markers.push(marker);
+            } else {
+                _this._markers[foundPos] = marker;
+            }
             localStorage.setItem(_this._storageName, JSON.stringify(_this._markers));
-
         }
 
-        function _removeMarker(id) {
+        function _removeMarker(markerId) {
             _this._markers = _getMarkers();
-            delete _this._markers[id];
-            localStorage.setItem(_this._storageName, JSON.stringify(_this._markers));
+            var foundPos = _findPosition(markerId);
+            if (foundPos !== null) {
+                _this._markers.splice(foundPos, 1);
+                localStorage.setItem(_this._storageName, JSON.stringify(_this._markers));
+            }
+        }
+
+        function _findPosition(markerId) {
+            var foundPos = null;
+            _this._markers.some(function (marker, pos) {
+                var match = marker._id === markerId;
+                if (match) {
+                    foundPos = pos;
+                }
+                return match;
+            });
+            return foundPos;
         }
     }
 
