@@ -91,7 +91,7 @@
                 '   <option value="Suggestion">Suggestion</option>' +
                 '</select>' +
                 '<br/>' +
-                '<textarea placeholder="Write a description" autofocus></textarea>' +
+                '<textarea placeholder="Write a description" autofocus maxlength="500"></textarea>' +
                 '<br/>' +
                 '<input type="button" value="Save">' +
                 '<input type="button" value="Cancel">'
