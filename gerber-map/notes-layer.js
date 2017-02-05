@@ -301,9 +301,9 @@
             '   <div class="number-circle"><span>' + marker._id + '</span></div>' +
             '   <h4>' + marker.title + '</h4>' +
             '</div>' +
-            '<b>' + marker.body + '</b><br/>' +
-            '<span><b>Author:</b> ' + marker.author + '</span><br/>' +
-            '<span><b>Date:</b> ' + marker.date + '</span>';
+            '<p class="comment-description"><b>' + marker.body + '</b></p>' +
+            '<div class="comment-info"><b>Author:</b> ' + marker.author + '</div>' +
+            '<div class="comment-info"><b>Date:</b> ' + marker.date + '</div>';
 
         var popup = L.popup()
             .setLatLng(marker._centerLatlng)
