@@ -43,6 +43,7 @@ svg {
 
 .map-tool {
 	background-color: transparent;
+	cursor: pointer;
 }
 .map-tool.comment {
 	background-image: url(images/comment.png);
