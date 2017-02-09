@@ -203,10 +203,9 @@ path.middle, path.zero {
     width: 150px;
 } 
 .customer-title, .project-title{
-    color: red;
-    font-size: 16px;
+    color: #717171;
+    font-size: 20px;
 }
 .titles{
     margin-top: 20px;
-    margin-left: 14px;
 }
