@@ -1586,7 +1586,7 @@ body.no-header.rtl .header {
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('../../assets/fonts/MONTSERRAT-REGULAR_0.ttf');
+	src: url('../../assets/fonts/MONTSERRAT-REGULAR_0.TTF');
 
 }
 
@@ -1602,22 +1602,22 @@ body.no-header.rtl .header {
 
 @font-face {
 	font-family: 'SegOE UI';
-	src: url('../../assets/fonts/SEGOEUI.ttf');
+	src: url('../../assets/fonts/SEGOEUI.TTF');
 }
 
 @font-face {
 	font-family: 'SegOE UI Light';
-	src: url('../../assets/fonts/SEGOEUIL.ttf');
+	src: url('../../assets/fonts/SEGOEUIL.TTF');
 }
 
 @font-face {
 	font-family: 'SegOE UI Bold';
-	src: url('../../assets/fonts/SEGOEUIB.ttf');
+	src: url('../../assets/fonts/SEGOEUIB.TTF');
 }
 
 @font-face {
 	font-family: 'Montserrat Bold';
-	src: url('../../assets/fonts/MONTSERRAT-BOLD_0.ttf');
+	src: url('../../assets/fonts/MONTSERRAT-BOLD_0.TTF');
 }
 
 
