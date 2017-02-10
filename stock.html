@@ -379,6 +379,7 @@
                     <div class="titles">
                       <span class="customer-title">This is the single location for all client equipment. We have different views to help context.</span>
                       <span class="project-title"></span>
+                      <button class="btn title-action-btn" onclick="toggleFirstQuickView();return false;">NEW EQUIPMENT</button>
                     </div>
                   </div>
                 </div>
@@ -386,22 +387,22 @@
               </div><!-- END "inner" header -->
             </div><!-- END fluid container header -->
           </div><!-- END "jumbotron" -->
-          <div class="content">
-            <div class="row">
-              <div class="select-option">
-                <select id="customer">
-                  <option value=""></option>
-                  <option value="customer1">Customer1</option>
-                  <option value="customer2">Customer2</option>
-                  
-                </select>
-                <select id="customer_project">
-                  
-                </select>
-              </div>
-            </div>
+          <div><!--<div class="content">-->
+            <!--<div class="row">-->
+              <!--<div class="select-option">-->
+                <!--<select id="customer">-->
+                  <!--<option value=""></option>-->
+                  <!--<option value="customer1">Customer1</option>-->
+                  <!--<option value="customer2">Customer2</option>-->
+
+                <!--</select>-->
+                <!--<select id="customer_project">-->
+
+                <!--</select>-->
+              <!--</div>-->
+            <!--</div>-->
             <div class="row" id="map-section">
-              <div class="board-viewer" data-board-url="">
+              <div class="board-viewer" data-board-url="gerber-map/data/customer-project_1/power_stage_rev1_2015-03-20.json">
                 <div class="map"></div>
                   <ul class="notes"></ul>
               </div>
@@ -1831,9 +1832,9 @@
         <a class="builder-close quickview-toggle pg-close"
         data-toggle="quickview" data-toggle-element="#builder"
         href="#" onclick="hideContactPane();return false;"></a>
-        <a id="builder-toggle1" href="#" accesskey="1" title="[1]"
+        <!--<a id="builder-toggle1" href="#" accesskey="1" title="[1]"
         class="builder-toggle pressed" onclick=
-        "toggleFirstQuickView();return false;"></a> <a id=
+        "toggleFirstQuickView();return false;"></a>--> <a id=
         "builder-toggle2" href="#" accesskey="2" title="[2]" class=
         "builder-toggle neural" onclick=
         "toggleSecondQuickView();return false;"></a> <a id=
@@ -2288,7 +2289,7 @@
     <script type="text/javascript" src="stock/js/data.js"></script>
     <script type="text/javascript" src="stock/js/page.js"></script>
  -->
-    <script type="text/javascript" src="gerber-map/yuri_jsfile.js"></script>
+    <!--<script type="text/javascript" src="gerber-map/yuri_jsfile.js"></script>-->
     <script type="text/javascript" src="gerber-map/leaflet.js"></script>
     <script type="text/javascript" src="gerber-map/gerber-layer.js"></script>
     <script type="text/javascript" src="gerber-map/notes-layer.js"></script>

@@ -1,16 +1,16 @@
 .board-viewer {
-	width: 1280px;
+	width: 100%;
 	height: 720px;
-	margin: 20px auto;
+	margin: 0;
 
 	display: flex;
 	flex-flow: row nowrap;
 }
 
 .board-viewer > .map {
-	width: 1100px;
+	width: 100%;
 	height: 720px;
-	flex: 0 0 1100px;
+	flex: 0 0 100%;
 }
 
 .board-viewer > .notes {

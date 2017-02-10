@@ -207,5 +207,20 @@ path.middle, path.zero {
     font-size: 20px;
 }
 .titles{
-    margin-top: 20px;
+    line-height: 60px;
+}
+button.title-action-btn {
+    position: static;
+    float: right;
+    color: #F0F0F0;
+    background-color: #004C66;
+    border-color: #004C66;
+
+    margin: 15px 22px 12px 0;
+}
+button.title-action-btn:hover,
+button.title-action-btn:focus
+{
+    background-color: rgba(0, 76, 102, 0.8);
+    color: #F0F0F0;
 }

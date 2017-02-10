@@ -122,4 +122,4 @@ function loadViewers() {
 	} );
 }
 
-//document.addEventListener("DOMContentLoaded", loadViewers);
+document.addEventListener("DOMContentLoaded", loadViewers);
